@@ -1,0 +1,34 @@
+.Footer {
+  width:100%;
+  position:fixed;
+  bottom:0px;
+  left:0px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.Footer.static {
+  position:static;
+  text-align:center;
+  width:auto;
+}
+.Footer p img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Footer .Footer-Wrapper {
+	padding:40px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.Footer .Footer-Wrapper .socials {
+  margin-top:0px;
+  padding-top:0px;
+}
+@media screen and (max-width: 498px) {
+	.Footer .Footer-Wrapper {
+		padding: 15px;
+	}
+}

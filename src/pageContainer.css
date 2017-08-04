@@ -1,0 +1,14 @@
+.Page {
+	background: #fff;  
+	min-height: 100vh;
+	min-width:  100%;
+}
+.Page .Wrapper {
+	min-height: 100vh;
+	max-width: 998px;
+	margin:auto;
+}
+.Page .Inner {
+	text-align:left;
+	padding-top:0px;
+}
