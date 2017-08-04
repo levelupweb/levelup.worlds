@@ -11,6 +11,7 @@ export default class DefaultContainer extends Component {
 				<Header burger={true} />
 				<div className="Wrapper">
 					<div className="Inner">
+						{/* Потомок */}
 						{children}
 					</div>
 				</div>
