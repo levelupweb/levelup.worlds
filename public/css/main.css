@@ -13,6 +13,13 @@ h1 small {
 	font-size:19px;
 	margin-top:5px;
 }
+h3 small {
+	font-weight:100;
+	display:block;
+	color:#555;
+	font-size:14px;
+	margin-top:5px;
+}
 a {
   color: #0012ff;
   text-decoration: none;
@@ -47,18 +54,22 @@ a:focus {
   min-height: 100vh!important;
 }
 p.primary {
-	font-size:22px;
+	font-size:19px;
 	color:rgba(0,0,0,0.8);
 	padding:0px;
 	margin:0px;
 }
-p.spacing {
+.spacing {
 	font-size:13px;
 	margin:0px;
 	letter-spacing: 2px;
 	text-transform: uppercase;
 	padding:0px;
 	vertical-align: middle;
+}
+p a {
+	background:#eeeff7;
+	padding-bottom:0px;
 }
 @media screen and (max-width: 768px) {
 	p.primary {
@@ -67,6 +78,46 @@ p.spacing {
 }
 b.primary {
 	color: #0012ff!important;
+}
+.button {
+	background:#0012ff;
+	padding:12px 15px;
+	border:1px solid #0012ff;
+	color:#fff;
+	transition:0.2s all ease;
+	font-size:13px;
+	margin:0px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	vertical-align: middle;
+	cursor:pointer;
+}
+.button:hover {
+	border-color:#0012ff;
+	color:#0012ff;
+	background: transparent;
+}
+.button:focus {
+	background:#000;
+	color:#fff;
+	border-color:#000;
+}
+.button.ghost {
+	color:#000;
+	border:0px;
+	background:transparent;
+	outline:none;
+	cursor:pointer;
+	border:1px solid transparent;
+	transition:0.2s all ease;
+}
+.button.ghost:hover {
+	border-color:#0012ff;
+	color:#0012ff;
+}
+.inverted * {
+	color:#fff!important;
+	border-color:#fff!important;
 }
 .Container {
 	padding: 40px;
@@ -81,10 +132,18 @@ b.primary {
 .fade-enter {
   opacity: 0;
   z-index: 1;
+  transform: translateY(100%);
+
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 250ms ease-in;
+  transform: translateY(0px);
+  transition: 0.5s all ease;
+}
+.fade-leave.fade-leave-active {
+	opacity:0;
+	transform: translateY(100%);
+
 }
 .statistic {
 	display: -ms-flexbox;
@@ -172,4 +231,7 @@ b.primary {
 }
 .List.socials {
 	font-size:13px;
+}
+.blocked {
+  overflow:hidden;
 }

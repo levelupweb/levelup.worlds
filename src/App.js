@@ -5,9 +5,10 @@ import { withRouter } from 'react-router'
 
 // components
 import About from './About/About.js'
-import Partner from './Partner/Partner.js'
+import Partner from './Partner/Partner.js' 
 import Index from './Index/Index.js'
 import Hiring from './Hiring/Hiring.js'
+import PageContainer from './PageContainer.js';
 
 class App extends Component {
 	render() {
@@ -16,12 +17,10 @@ class App extends Component {
 				<SwitchCSSTransitionGroup
 					location={this.props.location}
           transitionName="fade"
-          transitionEnterTimeout={300}
-          transitionLeaveTimeout={300}>
+          transitionEnterTimeout={600}
+          transitionLeaveTimeout={600}>
 		      <Route exact path="/" component={Index} />
-		      <Route path="/about" component={About} />
-		      <Route path="/partner" component={Partner} />
-		      <Route path="/hiring" component={Hiring} />
+		      <Route path="/page" component={PageContainer} />
 		    </SwitchCSSTransitionGroup>
 		  </div>
 		)

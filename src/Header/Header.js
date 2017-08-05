@@ -30,10 +30,10 @@ export default class Header extends Component {
 					<nav className={(revealed) ? 'navigation revealed' : 'navigation'}>
 						<ul>
 							<Link to="/" onClick={() => {this.revealNavigation()}}><li>Главная</li></Link>
-							<Link to="/about" onClick={() => {this.revealNavigation()}}><li>О нас</li></Link>
-							<Link to="/partner" onClick={() => {this.revealNavigation()}}><li>Партнерам</li></Link>
-							<Link to="/hiring" onClick={() => {this.revealNavigation()}}><li>Вакансии</li></Link>
-							<Link to="/team" onClick={() => {this.revealNavigation()}}><li>Команда</li></Link>
+							<Link to="/page/about" onClick={() => {this.revealNavigation()}}><li>О нас</li></Link>
+							<Link to="/page/partner" onClick={() => {this.revealNavigation()}}><li>Партнерам</li></Link>
+							<Link to="/page/hiring" onClick={() => {this.revealNavigation()}}><li>Вакансии</li></Link>
+							<Link to="/page/team" onClick={() => {this.revealNavigation()}}><li>Команда</li></Link>
 						</ul>
 					</nav>
 				</div>
@@ -44,10 +44,10 @@ export default class Header extends Component {
 					<nav className="navigation horizontal">
 						<ul>
 							<Link to="/"><li>Главная</li></Link>
-							<Link to="/about"><li>О нас</li></Link>
-							<Link to="/partner"><li>Партнерам</li></Link>
-							<Link to="/hiring"><li><b className="primary">Вакансии</b></li></Link>
-							<Link to="/team"><li>Команда</li></Link>
+							<Link to="/page/about"><li>О нас</li></Link>
+							<Link to="/page/partner"><li>Партнерам</li></Link>
+							<Link to="/page/hiring"><li><b className="primary">Вакансии</b></li></Link>
+							<Link to="/page/team"><li>Команда</li></Link>
 						</ul>
 					</nav>
 				</div>
