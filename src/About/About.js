@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
-import PageContainer from '../PageContainer.js'
+// import PageContainer from '../PageContainer.js'
 
 class About extends Component {
 	render() {
 		return (
-			<PageContainer>
 				<div className="About Container">
 					<h1>О компании <small>Немного о том, откуда мы вылезли</small></h1>
 					<p>Levelup Worlds - это <b className="primary">Digital-агентство</b> полного цикла, которое уже 5-й год помогает малому и среднему бизнесу выполнять свою работу
 					Мы помогаем привлекать клиентов, рассказывать о вашем продукте, создавать сам продукт, продумывать концепции продукта и ещё много чего интересного.</p>
-				
 					<div className="divider"></div>
 					<div className="statistic">
 						<div className="item">
@@ -46,9 +44,7 @@ class About extends Component {
 							</div>
 						</div>
 					</div>
-
 				</div>
-			</PageContainer>
 		);
 	}
 }
