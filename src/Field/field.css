@@ -1,0 +1,42 @@
+form {
+	margin:25px 0px;
+}
+form.fluid .field input,
+form.fluid .field textarea,
+form.fluid {
+	width:100%;
+}
+.field {
+	position:relative;
+	margin-bottom:15px;
+}
+.field label {
+	display:block;
+	margin-bottom:5px;
+	position:absolute;
+	left:0px;
+	top:9px;
+	z-index:-1;
+	transition:0.2s all ease;
+}
+.field input,
+.field textarea {
+	border:0px;
+	border-bottom:1px solid #c0c0c0;
+	padding:10px 0px;
+	font-size:15px;
+	background:transparent;
+	z-index:999;
+	outline:0;
+	transition:0.2s all ease;
+}
+.field input:focus,
+.field textarea:focus {
+	border-color:#0012ff;
+}
+.field.active label {
+  top: -10px;
+  left: -12px;
+ 	opacity:0.7;
+  transform: scale(0.8);
+}
