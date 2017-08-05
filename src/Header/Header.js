@@ -40,7 +40,7 @@ export default class Header extends Component {
 			);
 		} else {
 			return (
-				<div className="Container">
+				<div className="Container Header-static">
 					<nav className="navigation horizontal">
 						<ul>
 							<Link to="/"><li>Главная</li></Link>

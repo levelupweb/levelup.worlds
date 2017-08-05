@@ -11,11 +11,14 @@ import Hiring from './Hiring/Hiring.js'
 import About from './About/About.js'
 
 class PageContainer extends Component {
+	componentDidMount() {
+		setFooter();
+	}
 	render() {
 		return (
 			<div className="Page">
 				<Header burger={false} />
-				<div className="Wrapper">
+				<div className="Wrapper" ref={(e) => {this.wrapper = e}}>
 					<div className="Inner">
 						<SwitchCSSTransitionGroup
 							location={this.props.location}
@@ -31,6 +34,15 @@ class PageContainer extends Component {
 				<Footer fixed={false} />
 			</div>
 		);
+	}
+}
+
+function setFooter() {
+	const viewportHeight = window.innerHeight;
+	const contentHeight = document.querySelector('.Page .Wrapper').offsetHeight;
+	const headerHeight = document.querySelector('.Header-static').offsetHeight;
+	if(viewportHeight > (contentHeight + headerHeight)) {
+		document.querySelector('.Footer').classList.remove('static')
 	}
 }
 
