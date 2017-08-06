@@ -4,7 +4,7 @@ export default class Item extends Component {
 	renderSocials(socials) {
 		return socials.map((item, i) => {
 			const { link, title } = item;
-			return <a href={link}>
+			return <a href={link} target="_blank">
 				<li><i className={`fa fa-${title}`} href={link}></i>
 			</li></a>
 		})

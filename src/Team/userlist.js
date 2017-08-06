@@ -7,6 +7,18 @@ export default [
 			{
 				title: 'vk',
 				link: 'http://vk.com/vanya2h'
+			},
+			{
+				title: 'github',
+				link: 'https://github.com/kv9991'
+			},
+			{
+				title: 'instagram',
+				link: 'http://www.instagram.com/hittabeatz__hibandz/'
+			},
+			{
+				title: 'soundcloud',
+				link: 'http://soundcloud.com/ittanharakk'
 			}
 		]
 	},
@@ -17,7 +29,11 @@ export default [
 		socials: [
 			{
 				title: 'vk',
-				link: 'http://vk.com/vanya2h'
+				link: 'http://vk.com/luckydee'
+			},
+			{
+				title: 'instagram',
+				link: 'https://instagram.com/luckydee_1'
 			}
 		]
 	},
@@ -28,7 +44,7 @@ export default [
 		socials: [
 			{
 				title: 'vk',
-				link: 'http://vk.com/vanya2h'
+				link: 'https://vk.com/id59981707'
 			}
 		]
 	}
