@@ -6,6 +6,7 @@ import SwitchCSSTransitionGroup from 'switch-css-transition-group'
 import './pageContainer.css'
 
 import Partner from './Partner/Partner.js' 
+import Team from './Team/Team.js'
 import Index from './Index/Index.js'
 import Hiring from './Hiring/Hiring.js'
 import About from './About/About.js'
@@ -28,6 +29,7 @@ class PageContainer extends Component {
 								<Route path="/page/about" component={About} />
 					      <Route path="/page/partner" component={Partner} />
 					      <Route path="/page/hiring" component={Hiring} />
+					      <Route path="/page/team" component={Team} />
 				    </SwitchCSSTransitionGroup>
 					</div>
 				</div>
