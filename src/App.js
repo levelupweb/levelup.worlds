@@ -4,10 +4,7 @@ import SwitchCSSTransitionGroup from 'switch-css-transition-group'
 import { withRouter } from 'react-router'
 
 // components
-import About from './About/About.js'
-import Partner from './Partner/Partner.js' 
 import Index from './Index/Index.js'
-import Hiring from './Hiring/Hiring.js'
 import PageContainer from './PageContainer.js';
 
 class App extends Component {

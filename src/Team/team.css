@@ -1,3 +1,6 @@
+.Team {
+	padding-bottom:50px;
+}
 .team {
 	display:flex;
 	justify-content:space-between;

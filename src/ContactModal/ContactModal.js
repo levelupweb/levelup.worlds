@@ -33,8 +33,15 @@ export default class ContactModal extends Component {
 			}
 		})
 	}
+	renderAdditionalFields(fields) {
+		return fields.map((field, i) => {
+			const { title, name, type } = field 
+			return <Field key={i} onInput={this.updateMessage} title={title} name={name} type={type} />
+		})
+	}
 	render() {
 		const { isRevealed, message } = this.state;
+		const { additionalFields } = this.props;
 		const { title, description, content } = this.props.options;
 		return (
 			<div>
@@ -46,6 +53,9 @@ export default class ContactModal extends Component {
 							<Field onInput={this.updateMessage} defaultValue={description} title="Тема сообщения" name="subject" type="hidden" />
 							<Field onInput={this.updateMessage} title="Здесь ваше имя" name="userName" type="text" />
 							<Field onInput={this.updateMessage} title="Здесь e-mail" name="userEmail" type="text" />
+							{additionalFields && 
+								this.renderAdditionalFields(additionalFields)
+							}
 							<Field onInput={this.updateMessage} title="А здесь будет ваше сообщение.." name="userMessage" type="textarea" />
 							<input type="submit" className="button ghost" value="Отправить" />
 						</form>

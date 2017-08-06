@@ -40,7 +40,7 @@ class Index extends Component {
 					<h1>Levelup Worlds</h1>
 					<div id="description">
 				    <p>Привет!</p>
-				    <p>Мы - это <em>digital</em>-агентство полного цикла. Наша <Link to="/hiring">команда</Link> разрабатывает эффективные продукты, которые помогают вашему бизнесу.</p>
+				    <p>Мы - это digital-агентство полного цикла. Наша <Link to="/page/team">команда</Link> разрабатывает эффективные продукты, которые помогают вашему бизнесу.</p>
 					</div>
 					<p className="primary"></p>
 					<ul className="List projects">

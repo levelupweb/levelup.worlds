@@ -77,3 +77,14 @@
 .navigation.horizontal ul a:after {
 	background:#000;
 }
+.Header-static {
+	padding-bottom:0px!important;
+}
+.Header-static .socials {
+	margin:0px;
+	margin-bottom:16px;
+	justify-content:flex-start;
+}
+.Header-static .socials a {
+	color:#000;
+}
