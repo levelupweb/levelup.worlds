@@ -18,6 +18,7 @@
 .Header nav ul a li {
 	padding:5px 0px;
 	color:#000;
+	text-transform:uppercase;
 	font-weight:bold;
 	position:relative;
 }
