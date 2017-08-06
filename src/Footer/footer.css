@@ -10,7 +10,6 @@
 .Footer.static {
   position:static;
   text-align:center;
-  width:auto;
 }
 .Footer p img {
   display: inline-block;
