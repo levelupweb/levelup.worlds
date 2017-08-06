@@ -52,7 +52,7 @@ export default class Header extends Component {
 							<Link to="/"><li>Главная</li></Link>
 							<Link to="/page/about"><li>О нас</li></Link>
 							<Link to="/page/partner"><li>Партнерам</li></Link>
-							<Link to="/page/career"><li><b className="primary">Карьера</b></li></Link>
+							<Link to="/page/career"><li>Карьера</li></Link>
 							<Link to="/page/team"><li>Команда</li></Link>
 						</ul>
 					</nav>
