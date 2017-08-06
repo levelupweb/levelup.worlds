@@ -58,6 +58,7 @@ p.primary {
 	color:rgba(0,0,0,0.8);
 	padding:0px;
 	margin:0px;
+	margin-bottom:15px;
 }
 .spacing {
 	font-size:13px;
@@ -78,6 +79,9 @@ p a {
 }
 b.primary {
 	color: #0012ff!important;
+}
+.hidden {
+	display:none!important;
 }
 .button {
 	background:#0012ff;
@@ -114,6 +118,19 @@ b.primary {
 .button.ghost:hover {
 	border-color:#0012ff;
 	color:#0012ff;
+}
+.button.small {
+	width:auto;
+	display:inline-block;
+	font-size:13px;
+	font-weight:100;
+	text-transform:uppercase;
+	letter-spacing: 0px;
+	border-radius:999em;
+	color:#0012ff;
+	border:1px solid #0012ff;
+	background: transparent;
+	padding:5px 8px;
 }
 .inverted * {
 	color:#fff!important;

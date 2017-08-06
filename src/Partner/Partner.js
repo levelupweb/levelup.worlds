@@ -17,6 +17,7 @@ class Partner extends Component {
 				<Modal options={options}>
 					<button className="button">Связаться</button>
 				</Modal>
+				
 			</div>
 		);
 	}
