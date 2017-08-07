@@ -3,13 +3,14 @@ import Header from './Header/Header.js'
 import Footer from './Footer/Footer.js'
 import { Route, withRouter } from 'react-router-dom';
 import SwitchCSSTransitionGroup from 'switch-css-transition-group'
-import './pageContainer.css'
 
 import Partner from './Partner/Partner.js' 
 import Team from './Team/Team.js'
 import Index from './Index/Index.js'
 import Career from './Career/Career.js'
 import About from './About/About.js'
+import Contact from './Contact/Contact.js'
+
 
 class PageContainer extends Component {
 	render() {
@@ -27,6 +28,7 @@ class PageContainer extends Component {
 					      <Route path="/page/partner" component={Partner} />
 					      <Route path="/page/career" component={Career} />
 					      <Route path="/page/team" component={Team} />
+					      <Route path="/page/contact" component={Contact} />
 				    </SwitchCSSTransitionGroup>
 					</div>
 				</div>

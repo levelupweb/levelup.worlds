@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 import Position from './Position.js'
 import positions from './positions.js'
+import './career.css'
 
 export default class Career extends Component {
 	renderPositions(positions) {
-		return positions.map((item, i) => {
+		const sortedPositions = positions.sort((a, b) => {
+		  return new Date(a.date) - new Date(b.date);
+		});
+		return sortedPositions.map((item, i) => {
 			return <Position position={item} key={i} />
 		})
 	}

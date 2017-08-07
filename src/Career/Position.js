@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import dateFormat from 'dateformat';
 import ContactModal from '../ContactModal/ContactModal.js'
 import './position.css'
 
@@ -13,7 +14,7 @@ export default class Position extends Component {
 		})
 	}
 	render() {
-		const { title, level, description, needs, image } = this.props.position;
+		const { title, level, description, needs, image, date } = this.props.position;
 		const options = {
 			title: 'Обратная связь',
 			description: 'Заявка на должность: ' + title,
@@ -30,14 +31,14 @@ export default class Position extends Component {
 		}]
 		return (
 			<div className="Position">
+				<div className="Position-date">{dateFormat(date, 'dd.mm.yy')}</div>
 				<div className="Position-content">
 					<div className="left">
 						<img src={image} width="50px" />
 					</div>
 					<div className="right">
 						<h2>{title}</h2>
-						<p className="Position-level">Уровень: <strong>{level}</strong></p>
-						
+						<p className="Position-level"><strong>{level}</strong></p>
 					</div>
 				</div>
 				<p>{description}</p>

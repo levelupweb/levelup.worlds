@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Header/Header.js'
 import Footer from './Footer/Footer.js'
-import './defaultContainer.css'
 
 export default class DefaultContainer extends Component {
 	render() {

@@ -153,7 +153,6 @@ b.primary {
   opacity: 0;
   z-index: 1;
   transform: translateY(100%);
-
 }
 .fade-enter.fade-enter-active {
   opacity: 1;
@@ -163,8 +162,37 @@ b.primary {
 .fade-leave.fade-leave-active {
 	opacity:0;
 	transform: translateY(100%);
-
 }
+.Default {
+	background: #fff;  
+	min-height: 100vh;
+	min-width:  100%;
+}
+.Default .Wrapper {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	min-height: 100vh;
+	max-width: 998px;
+	margin:auto;
+}
+.Default .Inner {
+	text-align:center;
+}
+.Page {
+	background: #fff;  
+	min-height: 100vh;
+	min-width:  100%;
+}
+.Page .Wrapper {
+	max-width: 998px;
+	margin:auto;
+}
+.Page .Inner {
+	text-align:left;
+	padding-top:0px;
+}
+
 .statistic {
 	display: -ms-flexbox;
   display: -webkit-flex;

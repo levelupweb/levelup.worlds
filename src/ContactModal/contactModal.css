@@ -12,7 +12,6 @@
 	align-items:center;
 	justify-content:center;
 	transition:0.4s all ease;
-	overflow-x:scroll;
 }
 .Modal-wrapper {
 	max-width:550px;
