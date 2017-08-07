@@ -26,7 +26,7 @@ a {
   padding: 0px 0px;
   transition:0.2s all ease;
   position:relative;
-  padding-bottom:3px;
+  padding-bottom:0px;
 }
 a:after {
 	content: '';
@@ -200,21 +200,22 @@ b.primary {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
   -webkit-align-content: flex-start;
   -ms-flex-line-pack: start;
   align-content: flex-start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
+  flex-wrap:wrap;
   align-items: flex-start;
   margin:40px 0px;
 }
 .statistic .item {
-	margin-right:35px;
 	text-align:center;
-	width:33%;
+	width:32%;
+	margin-bottom:25px;
 }
 .statistic .item:last-child {
 	margin-right:0px;
