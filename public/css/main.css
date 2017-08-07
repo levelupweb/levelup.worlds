@@ -138,8 +138,11 @@ b.primary {
 }
 .Container {
 	padding: 40px;
-	max-width:550px;
+	max-width:600px;
 	margin:auto;
+}
+.Container h1 {
+	margin-top:0px;
 }
 @media screen and (max-width:498px) {
 	.Container {

@@ -32,14 +32,15 @@ export default class Position extends Component {
 			<div className="Position">
 				<div className="Position-content">
 					<div className="left">
-						<img src={image} width="128px" />
+						<img src={image} width="50px" />
 					</div>
 					<div className="right">
 						<h2>{title}</h2>
 						<p className="Position-level">Уровень: <strong>{level}</strong></p>
-						<p>{description}</p>
+						
 					</div>
 				</div>
+				<p>{description}</p>
 				<p className="Position-needs"><strong>Требуемые навыки</strong>: {this.renderList(needs)}</p>
 				<ContactModal additionalFields={additionalFields} options={options}>
 					<button className="button ">Откликнуться</button>

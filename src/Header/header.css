@@ -82,16 +82,8 @@
 .Header-static {
 	padding-bottom:0px!important;
 }
-.Header-static .socials {
-	margin:0px;
-	margin-bottom:16px;
-	justify-content:center;
-}
-.Header-static .socials a {
-	color:#000;
-}
 .Header-static .navigation ul {
-	justify-content:center;
+	justify-content:flex-start;
 }
 @media screen and (max-width:498px) {
 	.Header-static .navigation ul {

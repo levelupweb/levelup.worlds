@@ -14,7 +14,7 @@ export default class DefaultContainer extends Component {
 						{children}
 					</div>
 				</div>
-				<Footer fixed={true} />
+				<Footer />
 			</div>
 		);
 	}

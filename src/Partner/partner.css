@@ -1,0 +1,30 @@
+.Partner-action {
+	text-align:center;
+}
+.steps {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:stretch;
+	margin:30px 0px;
+}
+.steps .step {
+	width:33%;
+	max-width:150px;
+	text-align:center;
+	position: relative;
+}
+.steps .step:after {
+	content: '>';
+	font-size:20px;
+	color:#5a5a5a;
+	position:absolute;
+	left:100%;
+	margin-left:24px;
+	top:50%;
+	margin-top:-15px;
+}
+.steps .step:last-child:after {
+	content: '';
+	display:none;
+}

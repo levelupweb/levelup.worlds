@@ -1,7 +1,7 @@
 .Position {
 	border-bottom:1px solid #eee;
-	padding-bottom:20px;
-	margin-bottom:20px;
+	padding-bottom:30px;
+	margin-bottom:30px;
 }
 .Position:last-child {
 	border-bottom:0px;

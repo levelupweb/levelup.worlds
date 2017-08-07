@@ -34,6 +34,8 @@ export default class Header extends Component {
 							<Link to="/page/partner" onClick={() => {this.revealNavigation()}}><li>Партнерам</li></Link>
 							<Link to="/page/career" onClick={() => {this.revealNavigation()}}><li>Карьера</li></Link>
 							<Link to="/page/team" onClick={() => {this.revealNavigation()}}><li>Команда</li></Link>
+							<Link to="/page/contact" onClick={() => {this.revealNavigation()}}><li>Контакты</li></Link>
+							<Link to="/page/projects" onClick={() => {this.revealNavigation()}}><li>Проекты</li></Link>
 						</ul>
 					</nav>
 				</div>
@@ -41,19 +43,14 @@ export default class Header extends Component {
 		} else {
 			return (
 				<div className="Container Header-static">
-					<ul className="socials List visible">
-				    <a href="#"><li><i className="fa fa-twitter" href="#"></i></li></a>
-				    <a href="#"><li><i className="fa fa-facebook" href="#"></i></li></a>
-				    <a href="#"><li><i className="fa fa-vk" href="#"></i></li></a>
-				    <a href="#"><li><i className="fa fa-instagram" href="#"></i></li></a>
-					</ul>
 					<nav className="navigation horizontal">
 						<ul>
-							<Link to="/"><li>Главная</li></Link>
+							<Link to="/page/projects"><li>Проекты</li></Link>
 							<Link to="/page/about"><li>О нас</li></Link>
 							<Link to="/page/partner"><li>Партнерам</li></Link>
 							<Link to="/page/career"><li>Карьера</li></Link>
 							<Link to="/page/team"><li>Команда</li></Link>
+							<Link to="/page/contact"><li>Контакты</li></Link>
 						</ul>
 					</nav>
 				</div>

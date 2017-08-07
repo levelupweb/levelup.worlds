@@ -6,15 +6,7 @@ export default class Footer extends Component {
 		return (
 			<div className="Footer">
 				<div className="Footer-Wrapper">
-					<strong>Наши проекты: </strong> 
-					<ul className="List projects">
-						<a href="#"><li>NAME</li></a>
-						<a href="#"><li>SMM</li></a>
-						<a href="#"><li>WEB</li></a>
-						<a href="#"><li>FILM</li></a>
-						<a href="#"><li>MONTEMILLI</li></a>
-						<a href="#"><li>MAG</li></a>
-					</ul>
+					<p className="spacing">Создано с <img src="img/like.png" width="16px" /></p>
 				</div>
 			</div>
 		);
