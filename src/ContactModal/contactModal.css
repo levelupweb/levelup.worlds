@@ -12,10 +12,23 @@
 	align-items:center;
 	justify-content:center;
 	transition:0.4s all ease;
+	overflow-x:scroll;
 }
 .Modal-wrapper {
 	max-width:550px;
 	transition:0.4s all ease;
+	padding:0 15px;
+}
+@media screen and (max-width: 768px) {
+  .Modal-wrapper {
+  	overflow-y: scroll;
+	  height: auto;
+	  padding-bottom: 100px;
+	  padding-top: 100px;
+	}
+	.Modal.open {
+		padding-top:84px;
+	}
 }
 .Modal.open {
 	top:0;

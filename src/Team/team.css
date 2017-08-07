@@ -21,6 +21,7 @@
 @media screen and (max-width:598px) {
 	.team .item {
 		width:100%;
+		margin:auto;
 	}
 }
 .team .item .image {
@@ -45,4 +46,7 @@
 }
 .team .item .button {
 	margin-top:10px;
+}
+.team .item .socials {
+	margin-top:15px;
 }

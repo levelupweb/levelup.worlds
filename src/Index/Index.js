@@ -15,8 +15,8 @@ class Index extends Component {
 		  typeSpeed: 15,
 		  showCursor: false,
 		  onComplete() {
-		  	document.querySelector('.Footer .List.projects').classList.add('visible')
-		  	document.querySelector('.Footer .List.socials').classList.add('visible')
+		  	document.querySelector('.List.projects').classList.add('visible')
+		  	document.querySelector('.List.socials').classList.add('visible')
 		  }
 		});
 
@@ -29,6 +29,12 @@ class Index extends Component {
 		return (
 			<DefaultContainer>
 				<div className="Index Container">
+					<ul className="socials List">
+				    <a href="#"><li><i className="fa fa-twitter" href="#"></i></li></a>
+				    <a href="#"><li><i className="fa fa-facebook" href="#"></i></li></a>
+				    <a href="#"><li><i className="fa fa-vk" href="#"></i></li></a>
+				    <a href="#"><li><i className="fa fa-instagram" href="#"></i></li></a>
+					</ul>
 					<h1>Levelup Worlds</h1>
 					<div id="description">
 				    <p>Привет!</p>

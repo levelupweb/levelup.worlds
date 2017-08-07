@@ -74,6 +74,7 @@
 	color:#000;
 	font-weight:bold;
 	margin-right:15px;
+	text-transform:uppercase;
 }
 .navigation.horizontal ul a:after {
 	background:#000;
@@ -91,4 +92,12 @@
 }
 .Header-static .navigation ul {
 	justify-content:center;
+}
+@media screen and (max-width:498px) {
+	.Header-static .navigation ul {
+		justify-content:flex-start;
+	}
+	.Header-static .socials {
+		justify-content:flex-start;
+	}
 }

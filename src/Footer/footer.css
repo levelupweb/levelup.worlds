@@ -7,10 +7,6 @@
   align-items:center;
   justify-content:center;
 }
-.Footer.static {
-  position:static;
-  text-align:center;
-}
 .Footer p img {
   display: inline-block;
   vertical-align: middle;
@@ -21,7 +17,11 @@
   align-items:center;
   justify-content:center;
 }
-
+.Footer .Footer-Wrapper strong {
+  font-weight:bold;
+  text-transform: uppercase;
+  margin-right:20px;
+}
 .Footer .Footer-Wrapper .socials {
   margin-top:0px;
   padding-top:0px;

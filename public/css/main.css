@@ -60,6 +60,11 @@ p.primary {
 	margin:0px;
 	margin-bottom:15px;
 }
+@media screen and (max-width: 768px) {
+	p.primary {
+		font-size:16px;
+	}
+}
 .spacing {
 	font-size:13px;
 	margin:0px;
@@ -71,11 +76,6 @@ p.primary {
 p a {
 	background:#eeeff7;
 	padding-bottom:0px;
-}
-@media screen and (max-width: 768px) {
-	p.primary {
-		font-size:20px;
-	}
 }
 b.primary {
 	color: #0012ff!important;
@@ -232,7 +232,6 @@ b.primary {
 	justify-content:center;
 	padding:0px;
 	margin:0px;
-	margin-top:16px;
 	opacity:0;
 	transition:0.2s all ease;
 }
@@ -242,6 +241,7 @@ b.primary {
 .List a {
 	margin-right:20px;
 	font-weight:bold;
+	padding:0px;
 }
 .List a:last-child {
 	margin-right:0px;
