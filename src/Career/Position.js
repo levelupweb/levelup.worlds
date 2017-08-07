@@ -13,7 +13,7 @@ export default class Position extends Component {
 		})
 	}
 	render() {
-		const { title, level, description, needs, goods } = this.props.position;
+		const { title, level, description, needs, image } = this.props.position;
 		const options = {
 			title: 'Обратная связь',
 			description: 'Заявка на должность: ' + title,
@@ -30,9 +30,16 @@ export default class Position extends Component {
 		}]
 		return (
 			<div className="Position">
-				<h2>{title}</h2>
-				<p className="Position-level">Уровень: <strong>{level}</strong></p>
-				<p>{description}</p>
+				<div className="Position-content">
+					<div className="left">
+						<img src={image} width="128px" />
+					</div>
+					<div className="right">
+						<h2>{title}</h2>
+						<p className="Position-level">Уровень: <strong>{level}</strong></p>
+						<p>{description}</p>
+					</div>
+				</div>
 				<p className="Position-needs"><strong>Требуемые навыки</strong>: {this.renderList(needs)}</p>
 				<ContactModal additionalFields={additionalFields} options={options}>
 					<button className="button ">Откликнуться</button>

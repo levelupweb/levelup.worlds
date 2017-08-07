@@ -10,10 +10,17 @@
 }
 .Position h2 {
 	margin-bottom:5px;
+	margin-top:0px;
 }
 .Position-level {
 	margin-top:5px;
 }
 .Position-level strong {
 	color:#0012ff;
+}
+.Position-content {
+	display:flex;
+}
+.Position-content img {
+	margin-right:30px;
 }
