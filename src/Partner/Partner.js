@@ -16,24 +16,22 @@ class Partner extends Component {
 				<p className="primary">Суть партнёрской программы заключается в привлечении клиентов. Вы даёте нам заказчика, мы даём вам до 40% от сделки.</p>
 				<div className="steps">
 					<div className="step">
-						<img src="img/marketing.png" alt="Приглашай клиентов" width="70px" />
+						<img src="img/marketing.png" alt="Приглашай клиентов" width="50px" />
 						<h4>Вы приглашаете клиентов</h4>
 					</div>
 					<div className="step">
-						<img src="img/buy.png" alt="Клиент совершает покупку" width="70px" />
+						<img src="img/buy.png" alt="Клиент совершает покупку" width="50px" />
 						<h4>Клиент совершает покупку</h4>
 					</div>
 					<div className="step">
-						<img src="img/coins.png" alt="ы получаете деньги" width="70px" />
-						<h4>Вы получаете деньги</h4>
+						<img src="img/coins.png" alt="Вы получаете деньги" width="50px" />
+						<h4>Вы получаете деньги за сделку</h4>
 					</div>
 				</div>
 				<p className="primary">Процент от сделки вычисляется индивидуально и требует отдельного рассмотрения. Начните работать с нами сегодня!</p>
-				<div className="Partner-action">
-					<ContactModal options={options}>
-						<button className="button">Работать вместе</button>
-					</ContactModal>
-				</div>
+				<ContactModal options={options}>
+					<button className="button">Работать вместе</button>
+				</ContactModal>
 			</div>
 		);
 	}
