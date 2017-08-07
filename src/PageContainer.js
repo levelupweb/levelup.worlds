@@ -10,7 +10,7 @@ import Index from './Index/Index.js'
 import Career from './Career/Career.js'
 import About from './About/About.js'
 import Contact from './Contact/Contact.js'
-
+import Projects from './Projects/Projects.js'
 
 class PageContainer extends Component {
 	render() {
@@ -29,6 +29,7 @@ class PageContainer extends Component {
 					      <Route path="/page/career" component={Career} />
 					      <Route path="/page/team" component={Team} />
 					      <Route path="/page/contact" component={Contact} />
+					      <Route path="/page/projects" component={Projects} />
 				    </SwitchCSSTransitionGroup>
 					</div>
 				</div>
