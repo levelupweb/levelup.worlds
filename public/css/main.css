@@ -250,6 +250,19 @@ b.primary {
 		margin-bottom:25px;
 	}
 }
+.steps {
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	align-items:stretch;
+	margin:30px 0px;
+}
+.steps .step {
+	width:33%;
+	max-width:200px;
+	text-align:center;
+	position: relative;
+}
 .divider {
 	margin:30px 0px;
 	border-bottom:1px solid #eee;
