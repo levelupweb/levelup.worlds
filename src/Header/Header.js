@@ -17,6 +17,9 @@ export default class Header extends Component {
 			revealed: !this.state.revealed
 		})
 	}
+	revealStaticNavigation() {
+
+	}
 
 	render() {
 		const { burger } = this.props;

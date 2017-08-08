@@ -34,6 +34,7 @@
 	opacity:1.0;
 	visibility: visible;
 	z-index:999;
+	overflow-y:scroll;
 }
 .Modal-closer {
 	position:absolute;

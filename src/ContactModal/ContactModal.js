@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Field from '../Field/Field.js'
+import axios from 'axios'
 import './contactModal.css'
 
 export default class ContactModal extends Component {
@@ -16,8 +17,37 @@ export default class ContactModal extends Component {
 	}
 	handleSubmit = (e, message) => {
 		e.preventDefault()
-		// handle ajax to php
-		console.log(message)
+		axios.post('/sendemail.php', message)
+	  .then((response) => {
+	    this.handleResponse(response);
+	  })
+	  .catch((error) => {
+	    this.handleResponse({
+	    	success: false
+	    })
+	  });
+	}
+	handleResponse = (response) => {
+		const { message, success, errors } = response;
+		if(response.success) {
+			this.setState({
+				response: {
+					...response,
+					message,
+					success,
+					errors
+				}
+			})
+		} else {
+			this.setState({
+				response: {
+					...response,
+					message,
+					success,
+					errors
+				}
+			})
+		}
 	}
 	reveal = () => {
 		this.setState({
