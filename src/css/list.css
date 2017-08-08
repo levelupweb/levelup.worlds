@@ -1,0 +1,27 @@
+.list {
+	list-style-type:none;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	align-items:center;
+	justify-content:flex-start;
+	padding:0px;
+	margin:0px;
+	opacity:0;
+	transition:0.2s all ease;
+}
+.list.visible {
+	opacity:1.0;
+}
+.list a {
+	margin-right:20px;
+	font-weight:bold;
+	padding:0px;
+}
+.list a:last-child {
+	margin-right:0px;
+}
+.list.socials {
+	font-size:13px;
+	margin:10px 0px;
+}

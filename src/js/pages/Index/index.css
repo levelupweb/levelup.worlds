@@ -1,0 +1,12 @@
+.Index h1 {
+	font-size:55px;
+	margin:10px 0px;
+}
+@media screen and (max-width: 768px) {
+	.Index h1 {
+		font-size:25px;
+	}
+}
+.Index p.primary {
+	display:inline-block;
+}

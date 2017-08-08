@@ -1,0 +1,13 @@
+.positions {
+	position:relative;
+}
+.positions:after {
+	content: '';
+	position:absolute;
+	left:0px;
+	top:0px;
+	height:100%;
+	width:2px;
+	background: #0012ff;
+	margin-left:-20px;
+}
