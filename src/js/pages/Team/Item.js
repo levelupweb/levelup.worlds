@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import '../../../css/list.css'
 export default class Item extends Component {
 	renderSocials(socials) {
 		return socials.map((item, i) => {
@@ -22,7 +22,7 @@ export default class Item extends Component {
 					<div className="name"><h3>{name}</h3></div>
 					<div className="description">{description}</div>
 					<div className="button small" onClick={(e) => {this.revealSocials(e)}}>Follow</div>
-					<ul className="socials List" ref={(e) => {this.socials = e}}>
+					<ul className="socials list center" ref={(e) => {this.socials = e}}>
 				    {this.renderSocials(socials)}
 					</ul>
 				</div>
