@@ -4,13 +4,13 @@ import SwitchCSSTransitionGroup from 'switch-css-transition-group'
 import { withRouter } from 'react-router'
 
 // components
-import Index from './Index/Index.js'
-import PageContainer from './PageContainer.js';
+import Index from './js/pages/Index/Index.js'
+import PageContainer from './js/containers/PageContainer.js';
 
 class App extends Component {
 	render() {
 		return (
-			<div>
+			<div className="App">
 				<SwitchCSSTransitionGroup
 					location={this.props.location}
           transitionName="fade"

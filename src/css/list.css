@@ -13,6 +13,9 @@
 .list.visible {
 	opacity:1.0;
 }
+.list.center {
+	justify-content:center;
+}
 .list a {
 	margin-right:20px;
 	font-weight:bold;

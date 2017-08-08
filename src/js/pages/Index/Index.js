@@ -15,7 +15,7 @@ class Index extends Component {
 		return (
 			<DefaultContainer>
 				<div className="Index Container">
-					<Socials />
+					<Socials classNames="center" visible={false} />
 					<h1>Levelup Worlds</h1>
 					<div id="description">
 				    <p>Привет!</p>
