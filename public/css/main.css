@@ -137,8 +137,7 @@ b.primary {
 	border-color:#fff!important;
 }
 .Container {
-	padding: 40px;
-	max-width:600px;
+	max-width:610px;
 	margin:auto;
 }
 .Container h1 {
@@ -149,6 +148,19 @@ b.primary {
 		padding:15px;
 	}
 }
+.Container-inner {
+	padding:40px 0px;
+	width:100%;
+}
+.Container.fullpage {
+	min-height:100vh;
+	height:100vh;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	flex-direction:column;
+}
+
 .fade-enter {
   opacity: 0;
   z-index: 1;

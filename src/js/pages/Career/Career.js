@@ -15,10 +15,12 @@ class Career extends Component {
 	render() {
 		return (
 			<div className="Career Container">
-				<p className="primary">Хотите попробовать себя в роли нового члена команды Levelup? Возможно это ваш шанс обрести новый дружелюбный коллектив!</p>
-				<div className="divider"></div>
-				<div className="positions">
-					{this.renderPositions(positions)}
+				<div className="Container-inner">
+					<p className="primary">Хотите попробовать себя в роли нового члена команды Levelup? Возможно это ваш шанс обрести новый дружелюбный коллектив!</p>
+					<div className="divider"></div>
+					<div className="positions">
+						{this.renderPositions(positions)}
+					</div>
 				</div>
 			</div>
 		);

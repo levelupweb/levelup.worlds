@@ -6,6 +6,7 @@ import { withRouter } from 'react-router'
 // components
 import Index from './js/pages/Index/Index.js'
 import PageContainer from './js/containers/PageContainer.js';
+import NoMatch from './js/components/NoMatch/NoMatch.js';
 
 class App extends Component {
 	render() {
@@ -18,6 +19,7 @@ class App extends Component {
           transitionLeaveTimeout={600}>
 		      <Route exact path="/" component={Index} />
 		      <Route path="/page" component={PageContainer} />
+		      <Route component={NoMatch} />
 		    </SwitchCSSTransitionGroup>
 		  </div>
 		)

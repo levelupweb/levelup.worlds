@@ -32,14 +32,16 @@ class Partner extends Component {
 		]
 		return ( 
 			<div className="Partner Container">
-				<h1>Партнёрам <small>Партнёрская программа</small></h1>
-				<p className="primary">Вы имеете большую клиентскую базу? Мы предлагаем вам возможность на этом заработать!</p>
-				<p className="primary">Суть партнёрской программы заключается в привлечении клиентов. Вы даёте нам заказчика, мы даём вам до 40% от сделки.</p>
-				<InformationTable items={informationTableItems} />
-				<p className="primary">Процент от сделки вычисляется индивидуально и требует отдельного рассмотрения. Начните работать с нами сегодня!</p>
-				<ContactModal options={contactModalConfiguration}>
-					<button className="button">Работать вместе</button>
-				</ContactModal>
+				<div className="Container-inner">
+					<h1>Партнёрам <small>Партнёрская программа</small></h1>
+					<p className="primary">Вы имеете большую клиентскую базу? Мы предлагаем вам возможность на этом заработать!</p>
+					<p className="primary">Суть партнёрской программы заключается в привлечении клиентов. Вы даёте нам заказчика, мы даём вам до 40% от сделки.</p>
+					<InformationTable items={informationTableItems} />
+					<p className="primary">Процент от сделки вычисляется индивидуально и требует отдельного рассмотрения. Начните работать с нами сегодня!</p>
+					<ContactModal options={contactModalConfiguration}>
+						<button className="button">Работать вместе</button>
+					</ContactModal>
+				</div>
 			</div>
 		);
 	}

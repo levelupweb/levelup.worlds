@@ -46,16 +46,20 @@ export default class Header extends Component {
 		} else {
 			return (
 				<div className="Container Header-static">
-					<nav className="navigation horizontal">
-						<ul>
-							<Link to="/page/projects"><li>Проекты</li></Link>
-							<Link to="/page/about"><li>О нас</li></Link>
-							<Link to="/page/partner"><li>Партнерам</li></Link>
-							<Link to="/page/career"><li>Карьера</li></Link>
-							<Link to="/page/team"><li>Команда</li></Link>
-							<Link to="/page/contact"><li>Контакты</li></Link>
-						</ul>
-					</nav>
+					<div className="floating-logo">
+						<Link to="/"><img src="img/logo-default.png" width="55px" /></Link>
+					</div>
+					<div className="Container-inner">
+						<nav className="navigation horizontal">
+							<ul>
+								<Link to="/page/about"><li>О нас</li></Link>
+								<Link to="/page/partner"><li>Партнерам</li></Link>
+								<Link to="/page/career"><li>Карьера</li></Link>
+								<Link to="/page/team"><li>Команда</li></Link>
+								<Link to="/page/contact"><li>Контакты</li></Link>
+							</ul>
+						</nav>
+					</div>
 				</div>
 			)
 		}

@@ -1,12 +1,49 @@
-.Index h1 {
+.logotype {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.logotype img {
+	margin-right:15px;
+}
+.logotype h1 {
 	font-size:55px;
 	margin:10px 0px;
 }
 @media screen and (max-width: 768px) {
-	.Index h1 {
-		font-size:25px;
+	.logotype h1 {
+		font-size:29px;
 	}
 }
-.Index p.primary {
-	display:inline-block;
+.projects {
+	margin-top:70px;
+	display:flex;
+	flex-direction:row;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	width:100%;
+}
+.projects a {
+	color:#000;
+}
+.projects a:after {
+	display:none;
+}
+.projects .project {
+	width:33%;
+	margin-bottom:40px;
+}
+.Jumbotron {
+	position:relative;
+}
+.Jumbotron-actions {
+	position:absolute;
+	top:100%;
+	margin-top:100px;
+	left:0px;
+	width:100%;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	align-items:center;
 }

@@ -93,3 +93,28 @@
 		justify-content:flex-start;
 	}
 }
+.Header-static .Container-inner {
+	padding-bottom:0px;
+}
+.Header-static .floating-logo {
+	position:fixed;
+	left:0px;
+	top:0px;
+	padding:40px;
+}
+.Header-static .floating-logo a:after {
+	display:none;
+}
+@media screen and (max-width:960px) {
+	.Header-static .floating-logo {
+		position:static;
+		padding:0px;
+		margin-top:30px;
+		margin-right:30px;
+	}
+	.Header-static {
+		display:flex;
+		align-items:center;
+		justify-content: center;
+	}
+}

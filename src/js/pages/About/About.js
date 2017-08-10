@@ -28,21 +28,23 @@ const About = (props) => {
 	]
 	return (
 		<div className="About Container">
-			<Socials visible={true} />
-			<h1>Levelup Worlds</h1>
-			<p className="primary">
-				Levelup Worlds - это <b className="primary">Digital-агентство</b> полного цикла, которое уже 5-й год помогает малому и среднему бизнесу выполнять свою работу
-			</p>
-			<p className="primary">
-				Мы помогаем привлекать клиентов, рассказывать о вашем продукте, создавать сам продукт, продумывать концепции продукта и ещё много чего интересного.
-			</p>
-			<InformationTable items={informationTableItems} />
-			<p className="primary">
-				У вас есть деловое предложение? Напишите нам сегодня! Для этого вам необходимо просто нажать на кнопку ниже и следовать следующим инструкциям. Мы свяжемся с вами сразу, как это станет возможным
-			</p>
-			<ContactModal options={contactModalConfiguration}>
-				<button className="button">Работать вместе</button>
-			</ContactModal>
+			<div className="Container-inner">
+				<Socials visible={true} />
+				<h1>Levelup Worlds</h1>
+				<p className="primary">
+					Levelup Worlds - это <b className="primary">Digital-агентство</b> полного цикла, которое уже 5-й год помогает малому и среднему бизнесу выполнять свою работу
+				</p>
+				<p className="primary">
+					Мы помогаем привлекать клиентов, рассказывать о вашем продукте, создавать сам продукт, продумывать концепции продукта и ещё много чего интересного.
+				</p>
+				<InformationTable items={informationTableItems} />
+				<p className="primary">
+					У вас есть деловое предложение? Напишите нам сегодня! Для этого вам необходимо просто нажать на кнопку ниже и следовать следующим инструкциям. Мы свяжемся с вами сразу, как это станет возможным
+				</p>
+				<ContactModal options={contactModalConfiguration}>
+					<button className="button">Работать вместе</button>
+				</ContactModal>
+			</div>
 		</div>
 	);
 }
