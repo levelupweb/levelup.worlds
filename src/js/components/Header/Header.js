@@ -32,13 +32,11 @@ export default class Header extends Component {
 					</p>
 					<nav className={(revealed) ? 'navigation revealed' : 'navigation'}>
 						<ul>
-							<Link to="/" onClick={() => {this.revealNavigation()}}><li>Главная</li></Link>
 							<Link to="/page/about" onClick={() => {this.revealNavigation()}}><li>О нас</li></Link>
 							<Link to="/page/partner" onClick={() => {this.revealNavigation()}}><li>Партнерам</li></Link>
 							<Link to="/page/career" onClick={() => {this.revealNavigation()}}><li>Карьера</li></Link>
 							<Link to="/page/team" onClick={() => {this.revealNavigation()}}><li>Команда</li></Link>
 							<Link to="/page/contact" onClick={() => {this.revealNavigation()}}><li>Контакты</li></Link>
-							<Link to="/page/projects" onClick={() => {this.revealNavigation()}}><li>Проекты</li></Link>
 						</ul>
 					</nav>
 				</div>

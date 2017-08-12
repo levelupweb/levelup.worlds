@@ -80,9 +80,6 @@ p a {
 b.primary {
 	color: #0012ff!important;
 }
-.hidden {
-	display:none!important;
-}
 .button {
 	background:#0012ff;
 	padding:12px 15px;
@@ -150,6 +147,7 @@ b.primary {
 }
 .Container-inner {
 	padding:40px 0px;
+	position:relative;
 	width:100%;
 }
 .Container.fullpage {
@@ -212,4 +210,8 @@ b.primary {
 }
 .blocked {
   overflow:hidden;
+}
+.center {
+	text-align:center;
+	width:100%;
 }

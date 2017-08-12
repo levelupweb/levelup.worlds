@@ -15,13 +15,26 @@
 		font-size:29px;
 	}
 }
+@media screen and (max-width:576px) {
+	.logotype img {
+		display:none;
+	}
+}
 .projects {
-	margin-top:70px;
+	margin:50px 0;
 	display:flex;
 	flex-direction:row;
 	flex-wrap:wrap;
 	justify-content:space-between;
 	width:100%;
+}
+@media screen and (max-width:576px) {
+	.projects .project p {
+		display:none;
+	}
+	.Proj {
+		margin-top:-56px!important;
+	}
 }
 .projects a {
 	color:#000;
@@ -31,19 +44,48 @@
 }
 .projects .project {
 	width:33%;
-	margin-bottom:40px;
+	margin-bottom:17px;
+	transition: 0.2s all ease;
+}
+.projects .project:hover {
+	transform:scale(1.1);
+}
+.projects .project .title {
+	padding:0 15px;
 }
 .Jumbotron {
 	position:relative;
+	left:0px;
+	top:0px;
+	opacity:1.0;
+	transition:0.2s all ease;
+}
+.Jumbotron.hidden {
+	opacity:0;
+	z-index:-10;
 }
 .Jumbotron-actions {
 	position:absolute;
 	top:100%;
-	margin-top:100px;
+	margin-top:15px;
 	left:0px;
 	width:100%;
 	display:flex;
 	align-items:center;
 	justify-content:center;
 	align-items:center;
+}
+.Proj {
+	opacity:0;
+	position:absolute;
+	left:0px;
+	top:0px;
+	margin-top:-100px;
+	z-index:-10;
+	transition:0.2s all ease;
+	width:100%;
+}
+.Proj.visible {
+	opacity:1.0;
+	z-index:20;
 }
