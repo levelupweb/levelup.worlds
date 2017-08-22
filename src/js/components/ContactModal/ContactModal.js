@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
 import Field from '../Field/Field.js'
 import axios from 'axios'
+import Mail from '../../services/mail.js'
+import config from '../../../config.js'
+import generateMailHTML from '../../templates/mail.js'
+import { NotificationContainer } from 'react-notifications';
 import './contactModal.css'
 
 export default class ContactModal extends Component {
 	constructor(props) {
 		super(props);
+		this.mail = new Mail(
+			config.mail.secret, 
+			'Иван из Levelup Worlds', 
+			'beatzhitta@gmail.com', 
+			'Новая заявка на сайте Levelup Worlds',
+			config.mail.sendURL
+		);
 		this.state = {
 			isRevealed: false,
 			message: {}
@@ -15,25 +26,9 @@ export default class ContactModal extends Component {
 		const { description } = this.props.options
 		this.updateMessage('subject', description)
 	}
-	handleSubmit = (e, message) => {
+	submitForm(e, html) {
 		e.preventDefault()
-		console.log(message)
-		axios({
-			url: 'http://beta.levelupworlds.com/gmail.php',
-			headers: { 
-				"Access-Control-Allow-Origin": "*" 
-			},
-			method: 'POST'
-		})
-	  .then((response) => {
-	  	console.log(response)
-	    this.handleResponse(response);
-	  })
-	  .catch((error) => {
-	    this.handleResponse({
-	    	success: false
-	    })
-	  });
+		this.mail.dispatchSend(html)			
 	}
 	handleResponse = (response) => {
 		const { message, success, errors } = response;
@@ -86,6 +81,7 @@ export default class ContactModal extends Component {
 		const { title, description, content } = this.props.options;
 		return (
 			<div>
+				<NotificationContainer />
 				<div className={isRevealed ? 'Modal open' : 'Modal'}>
 					<div className="Modal-wrapper inverted">
 						<div className="Modal-title"><h1>{title} <small>{description}</small></h1></div>
@@ -98,7 +94,7 @@ export default class ContactModal extends Component {
 								this.renderAdditionalFields(additionalFields)
 							}
 							<Field fieldName="Сообщение" onInput={this.updateMessage} title="А здесь будет ваше сообщение.." name="userMessage" type="textarea" />
-							<input type="submit" className="button ghost" value="Отправить" />
+							<button onClick={(e) => {this.submitForm(e, generateMailHTML(message))}} className="button ghost">Отправить</button>
 						</form>
 						<div className="Modal-closer">
 							<button className="button ghost" onClick={this.reveal}>Закрыть</button>
