@@ -8,26 +8,22 @@
 	opacity:0;
 	visibility:hidden;
 	background:#000;
-	display:flex;
-	align-items:center;
-	justify-content:center;
 	transition:0.4s all ease;
+	display:flex;
+	align-items:flex-start;
+	justify-content:center;
+	overflow-y:scroll;
 }
 .Modal-wrapper {
 	max-width:550px;
 	transition:0.4s all ease;
 	padding:0 15px;
-}
-@media screen and (max-width: 768px) {
-  .Modal-wrapper {
-  	overflow-y: scroll;
-	  height: auto;
-	  padding-bottom: 100px;
-	  padding-top: 100px;
-	}
-	.Modal.open {
-		padding-top:84px;
-	}
+	height: 100%;
+  display:flex;
+	align-items:flex-start;
+	justify-content:flex-start;
+	flex-direction:column;
+	padding-top:100px;
 }
 .Modal.open {
 	top:0;

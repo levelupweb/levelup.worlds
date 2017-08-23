@@ -1,3 +1,13 @@
+const renderList = (data) => {
+	return Object.values(data).map((item) => {
+		if(!item.spamDetection) {
+			return `<li><b>${item.fieldName}</b>: ${item.value}</li>`;
+		} else {
+			return ``;
+		}
+	}).join('')
+}
+
 const template = (data) => {
 	return `<html><body>
 		<style>
@@ -20,14 +30,6 @@ const template = (data) => {
 			${renderList(data)}
 		</ul>
 	</body></html>`
-}
-
-const renderList = (data) => {
-	return Object.values(data).map((item) => {
-		if(!item.spamDetection) {
-			return `<li><b>${item.fieldName}</b>: ${item.value}</li>`;
-		}
-	}).join('')
 }
 
 export default template

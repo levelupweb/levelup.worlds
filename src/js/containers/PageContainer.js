@@ -1,20 +1,24 @@
 import React, { Component } from 'react';
-import Header from '../components/Header/Header.js'
+import Header from '../components/header/Header.js'
 import { Route, withRouter } from 'react-router-dom';
 import SwitchCSSTransitionGroup from 'switch-css-transition-group';
-import NoMatch from '../components/NoMatch/NoMatch.js';
+import NoMatch from '../components/noMatch/NoMatch.js';
 
-import Partner from '../pages/Partner/Partner.js';
-import Team from '../pages/Team/Team.js'
-import Career from '../pages/Career/Career.js'
-import About from '../pages/About/About.js'
-import Contact from '../pages/Contact/Contact.js'
+import Partner from '../pages/partner/Partner.js';
+import Team from '../pages/team/Team.js'
+import Career from '../pages/career/Career.js'
+import About from '../pages/about/About.js'
+import Contact from '../pages/contact/Contact.js'
 
 class PageContainer extends Component {
 	render() {
 		return (
 			<div className="Page">
-				<Header burger={false} />
+				<div className="Container">
+					<div className="Container-Inner" style={{paddingTop:20+'px'}}>
+						<Header burger={false} />
+					</div>
+				</div>
 				<SwitchCSSTransitionGroup
 					location={this.props.location}
           transitionName="fade"

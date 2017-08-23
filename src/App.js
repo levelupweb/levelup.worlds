@@ -4,9 +4,9 @@ import SwitchCSSTransitionGroup from 'switch-css-transition-group'
 import { withRouter } from 'react-router'
 
 // components
-import Index from './js/pages/Index/Index.js'
+import Index from './js/pages/index/Index.js'
 import PageContainer from './js/containers/PageContainer.js';
-import NoMatch from './js/components/NoMatch/NoMatch.js';
+import NoMatch from './js/components/noMatch/NoMatch.js';
 
 class App extends Component {
 	render() {

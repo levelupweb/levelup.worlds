@@ -1,7 +1,57 @@
 import React, { Component } from 'react';
 import dateFormat from 'dateformat';
-import ContactModal from '../../components/ContactModal/ContactModal.js'
+import ContactForm from '../../components/contactForm/ContactForm.js';
+import Modal from '../../components/modal/Modal.js';
 import './position.css'
+
+const contactModalConfiguration = {
+	title: 'Отклик на вакансию',
+	description: 'Ваше сообщение',
+	content: 'Оставьте свою контактную информацию, а также рекомендуем прикрепить своё резюме, чтобы увеличить шансы на ответ!'
+}
+
+const contactFormFields = [
+	{
+		fieldName: 'Имя клиента',
+		placeholder: 'Ваше имя',
+		name: 'userName',
+		type: 'text'
+	},
+	{
+		fieldName: 'E-Mail',
+		placeholder: 'Ваш E-Mail',
+		name: 'userEmail',
+		type: 'text'
+	},
+	{
+		fieldName: 'Мобильный телефон',
+		placeholder: 'Контактный телефон',
+		name: 'userPhone',
+		type: 'text'
+	},
+	{
+		placeholder: 'Ссылка на резюме',
+		name: 'userResume',
+		type: 'text',
+		fieldName: 'Ссылка на резюме клиента'		
+	}, 
+	{
+		placeholder: 'Ссылка на портфолио',
+		name: 'userPortfolio',
+		type: 'text',
+		fieldName: 'Ссылка на резюме клиента'
+	},
+	{
+		fieldName: 'Сообщение',
+		placeholder: 'Ваше сообщение',
+		name: 'userMessage',
+		type: 'textarea'
+	}
+]
+
+const renderContactForm = () => <ContactForm 
+	isFluid={true} 
+	fields={contactFormFields} />
 
 export default class Position extends Component {
 	renderList(items) {
@@ -13,24 +63,10 @@ export default class Position extends Component {
 			}
 		})
 	}
+
 	render() {
 		const { title, level, description, needs, image, date } = this.props.position;
-		const options = {
-			title: 'Обратная связь',
-			description: 'Заявка на должность: ' + title,
-			content: 'Оставьте свою контактную информацию, а также рекомендуем прикрепить своё резюме, чтобы увеличить шансы на ответ!'
-		}
-		const additionalFields = [{
-			title: 'Ссылка на резюме',
-			name: 'userResume',
-			type: 'text',
-			fieldName: 'Ссылка на резюме клиента'		
-		}, {
-			title: 'Ссылка на портфолио',
-			name: 'userPortfolio',
-			type: 'text',
-			fieldName: 'Ссылка на резюме клиента'
-		}]
+
 		return (
 			<div className="Position">
 				<div className="Position-date">{dateFormat(date, 'dd.mm.yy')}</div>
@@ -45,9 +81,9 @@ export default class Position extends Component {
 				</div>
 				<p>{description}</p>
 				<p className="Position-needs"><strong>Требуемые навыки</strong>: {this.renderList(needs)}</p>
-				<ContactModal additionalFields={additionalFields} options={options}>
-					<button className="button ">Откликнуться</button>
-				</ContactModal>
+				<Modal options={contactModalConfiguration} render={renderContactForm()}>
+					<button className="button">Откликнуться</button>
+				</Modal>
 			</div>
 		);
 	}

@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Header from '../components/Header/Header.js'
-import Footer from '../components/Footer/Footer.js'
+import Footer from '../components/footer/Footer.js'
+import Burger from '../components/burger/Burger.js'
 
 export default class DefaultContainer extends Component {
 	render() {
 		const { children } = this.props
 		return (
 			<div className="Default">
-				<Header burger={true} />
+				<Burger />
 				<div className="Wrapper">
 					<div className="Inner">
 						{children}

@@ -9,5 +9,5 @@ export default new function() {
 		this.port = "3080";
 		this.secret = "8gia89fianfiajsf";
 		this.sendURL = config.hosturl + ':' + this.port + '/send';
-	}
-};
+	}()
+}();

@@ -1,34 +1,64 @@
 import React from 'react';
-import ContactModal from '../../components/ContactModal/ContactModal.js'
-import InformationTable from '../../components/InformationTable/InformationTable.js'
+import ContactForm from '../../components/contactForm/ContactForm.js';
+import Modal from '../../components/modal/Modal.js';
+import InformationTable from '../../components/informationTable/InformationTable.js'
+
+const contactFormFields = [
+	{
+		fieldName: 'Имя клиента',
+		placeholder: 'Ваше имя',
+		name: 'userName',
+		type: 'text'
+	},
+	{
+		fieldName: 'E-Mail',
+		placeholder: 'Ваш E-Mail',
+		name: 'userEmail',
+		type: 'text'
+	},
+	{
+		fieldName: 'Мобильный телефон',
+		placeholder: 'Контактный телефон',
+		name: 'userPhone',
+		type: 'text'
+	},
+	{
+		fieldName: 'Сообщение',
+		placeholder: 'Ваше сообщение',
+		name: 'userMessage',
+		type: 'textarea'
+	}
+]
 
 const Contact = () => {
+
+	const renderContactForm = () => <ContactForm 
+		isFluid={true} 
+		fields={contactFormFields} />
+
 	const contactModalConfiguration = {
 		title: 'Обратная связь',
 		description: 'Сообщение',
 		content: 'С вашими деловыми предложениями вы можете обращаться при помощи данной формы обратной связи'
 	}
+
 	const informationTableItems = [
 		{
 			image: 'img/smartphone.png',
 			imageSize: 64,
 			imageAlt: 'Контктный телефон',
-			title: 'Наш телефон',
 			description: '(903) 634-69-29'
 		},
 		{
 			image: 'img/placeholder.png',
 			imageAlt: 'Адрес',
-			title: 'Наш адрес',
 			description: 'г. Москва, Пресненская наб., 6, стр. 2'
 		},
 		{
 			image: 'img/paper-plane.png',
 			imageAlt: 'Почта',
-			title: 'Наша почта',
 			description: 'levelupworlds@gmail.com'
-		},
-		
+		}
 	]
 	return (
 		<div className="Contact Container">
@@ -39,9 +69,9 @@ const Contact = () => {
 				<p className="primary">
 					Также вы можете написать нам письмо на почту. Оставьте свою контактную информацию, если вы ждёте ответа.
 				</p>
-				<ContactModal options={contactModalConfiguration}>
+				<Modal options={contactModalConfiguration} render={renderContactForm()}>
 					<button className="button">Написать нам</button>
-				</ContactModal>
+				</Modal>
 			</div>
 		</div>
 	);

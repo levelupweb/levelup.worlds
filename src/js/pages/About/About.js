@@ -1,9 +1,42 @@
-import React from 'react';
-import ContactModal from '../../components/ContactModal/ContactModal.js'
-import InformationTable from '../../components/InformationTable/InformationTable.js';
-import Socials from '../../components/Socials/Socials.js'
+import React from 'react'; 
+import ContactForm from '../../components/contactForm/ContactForm.js';
+import Modal from '../../components/modal/Modal.js';
+import InformationTable from '../../components/informationTable/InformationTable.js';
+import Socials from '../../components/socials/Socials.js'
+
+const contactFormFields = [
+	{
+		fieldName: 'Имя клиента',
+		placeholder: 'Ваше имя',
+		name: 'userName',
+		type: 'text'
+	},
+	{
+		fieldName: 'E-Mail',
+		placeholder: 'Ваш E-Mail',
+		name: 'userEmail',
+		type: 'text'
+	},
+	{
+		fieldName: 'Мобильный телефон',
+		placeholder: 'Контактный телефон',
+		name: 'userPhone',
+		type: 'text'
+	},
+	{
+		fieldName: 'Сообщение',
+		placeholder: 'Ваше сообщение',
+		name: 'userMessage',
+		type: 'textarea'
+	}
+]
 
 const About = (props) => {
+
+	const renderContactForm = () => <ContactForm 
+		isFluid={true} 
+		fields={contactFormFields} />
+
 	const contactModalConfiguration = {
 		title: 'Обратная связь',
 		description: 'Деловое предложение',
@@ -41,9 +74,9 @@ const About = (props) => {
 				<p className="primary">
 					У вас есть деловое предложение? Напишите нам сегодня! Для этого вам необходимо просто нажать на кнопку ниже и следовать следующим инструкциям. Мы свяжемся с вами сразу, как это станет возможным
 				</p>
-				<ContactModal options={contactModalConfiguration}>
-					<button className="button">Работать вместе</button>
-				</ContactModal>
+				<Modal options={contactModalConfiguration} render={renderContactForm()}>
+					<button className="button">Написать нам</button>
+				</Modal>
 			</div>
 		</div>
 	);

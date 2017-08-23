@@ -2,7 +2,7 @@ export default [
 	{
 		name: 'Иван',
 		description: 'Руководитель Levelup.Web',
-		image: 'http://levelupworlds.com/wp-content/uploads/2016/08/vanya.png',
+		image: 'img/vanya-150x150.png',
 		socials: [
 			{
 				title: 'vk',
@@ -25,7 +25,7 @@ export default [
 	{
 		name: 'Николас',
 		description: 'Руководитель Levelup.Worlds',
-		image: 'http://levelupworlds.com/wp-content/uploads/2016/08/lucky.png',
+		image: 'img/lucky-150x150.png',
 		socials: [
 			{
 				title: 'vk',
@@ -40,7 +40,7 @@ export default [
 	{
 		name: 'Дарина',
 		description: 'Руководитель Levelup.SMM',
-		image: 'http://levelupworlds.com/wp-content/uploads/2016/08/darina.png',
+		image: 'img/darina-150x150.png',
 		socials: [
 			{
 				title: 'vk',

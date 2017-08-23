@@ -54,26 +54,6 @@ a:focus {
 #root {
   min-height: 100vh!important;
 }
-p.primary {
-	font-size:19px;
-	color:rgba(0,0,0,0.8);
-	padding:0px;
-	margin:0px;
-	margin-bottom:15px;
-}
-@media screen and (max-width: 768px) {
-	p.primary {
-		font-size:16px;
-	}
-}
-.spacing {
-	font-size:13px;
-	margin:0px;
-	letter-spacing: 2px;
-	text-transform: uppercase;
-	padding:0px;
-	vertical-align: middle;
-}
 p a {
 	padding-bottom:0px;
 }
@@ -149,6 +129,11 @@ b.primary {
 	padding:40px 0px;
 	position:relative;
 	width:100%;
+}
+@media screen and (max-width:768px) {
+	.Container-inner {
+		padding: 10px 0;
+	}
 }
 .Container.fullpage {
 	min-height:100vh;

@@ -1,8 +1,7 @@
 import React from 'react';
 import Field from '../field/Field.js';
-import axios from 'axios';
 import Mail from '../../services/mail.js'
-import config from '../../config.js'
+import config from '../../../config.js'
 import generateMailHTML from '../../templates/mail.js'
 import { NotificationContainer } from 'react-notifications';
 import "./contactForm.css"
@@ -49,7 +48,7 @@ class ContactForm extends React.Component {
 	}
 	render() {
 		const { message } = this.state;
-		const { fields, subject, isFluid } = this.props;
+		const { fields, isFluid } = this.props;
 		return (
 			<form className={isFluid && 'fluid'}>
 				{this.renderFields(fields)}

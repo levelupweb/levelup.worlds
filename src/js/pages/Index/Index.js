@@ -1,10 +1,44 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import DefaultContainer from "../../containers/DefaultContainer.js";
-import Socials from "../../components/Socials/Socials.js";
+import Socials from "../../components/socials/Socials.js";
 import Typed from "typed.js";
 import ScrollReveal from "scrollreveal";
 import "./index.css";
+
+
+const prepareIndexPage = () => {
+	var sr = ScrollReveal();
+	new Typed(".typed-text", {
+		stringsElement: "#description",
+		typeSpeed: 15,
+		showCursor: false,
+		onComplete() {
+			document.querySelector(".socials").classList.add("visible");
+		}
+	});
+
+	sr.reveal(".Jumbotron .logotype", {
+		duration: 500,
+		delay: 1000,
+		origin: "top"
+	});
+	sr.reveal(".Jumbotron .Jumbotron-actions", {
+		duration: 500,
+		delay: 5500,
+		origin: "bottom"
+	});
+	sr.reveal(
+		".Default .Footer",
+		{ duration: 500, origin: "bottom", delay: 5500 },
+		100
+	);
+	sr.reveal(
+		".Default .Header",
+		{ duration: 500, origin: "top", delay: 5000 },
+		100
+	);
+};
 
 class Index extends Component {
 	componentDidMount() {
@@ -190,37 +224,5 @@ class Index extends Component {
 	}
 }
 
-const prepareIndexPage = () => {
-	var sr = ScrollReveal();
-	new Typed(".typed-text", {
-		stringsElement: "#description",
-		typeSpeed: 15,
-		showCursor: false,
-		onComplete() {
-			document.querySelector(".socials").classList.add("visible");
-		}
-	});
-
-	sr.reveal(".Jumbotron .logotype", {
-		duration: 500,
-		delay: 1000,
-		origin: "top"
-	});
-	sr.reveal(".Jumbotron .Jumbotron-actions", {
-		duration: 500,
-		delay: 5500,
-		origin: "bottom"
-	});
-	sr.reveal(
-		".Default .Footer",
-		{ duration: 500, origin: "bottom", delay: 5500 },
-		100
-	);
-	sr.reveal(
-		".Default .Header",
-		{ duration: 500, origin: "top", delay: 5000 },
-		100
-	);
-};
 
 export default Index;
