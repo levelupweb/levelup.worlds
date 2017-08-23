@@ -81,6 +81,7 @@ export default class Position extends Component {
 				</div>
 				<p>{description}</p>
 				<p className="Position-needs"><strong>Требуемые навыки</strong>: {this.renderList(needs)}</p>
+				<br />
 				<Modal options={contactModalConfiguration} render={renderContactForm()}>
 					<button className="button">Откликнуться</button>
 				</Modal>

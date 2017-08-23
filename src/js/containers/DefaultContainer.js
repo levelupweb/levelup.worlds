@@ -13,7 +13,7 @@ export default class DefaultContainer extends Component {
 						{children}
 					</div>
 				</div>
-				<Footer />
+				<Footer page={false} />
 			</div>
 		);
 	}

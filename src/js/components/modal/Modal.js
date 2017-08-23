@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Field from '../field/Field.js'
+import axios from 'axios'
 import './modal.css'
 
 class Modal extends Component {
@@ -15,7 +17,7 @@ class Modal extends Component {
 		toggleBlurOnBody()
 	}
 	render() {
-		const { isRevealed } = this.state;
+		const { isRevealed, message } = this.state;
 		const { render } = this.props;
 		const { title, description, content } = this.props.options;
 		return (
@@ -25,7 +27,11 @@ class Modal extends Component {
 						<div className="Modal-closer">
 							<button className="button ghost" onClick={this.reveal}>Закрыть</button>
 						</div>
-						<div className="Modal-title"><h1>{title} <small>{description}</small></h1></div>
+						<div className="Modal-title">
+							<div className="block">
+								<h1>{title} <small>{description}</small></h1>
+							</div>
+						</div>
 						<div className="Modal-content">
 							<div className="block">
 								<p>{content}</p>

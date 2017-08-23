@@ -12,22 +12,41 @@ export default class Team extends Component {
 	}
 	render() {
 		return (
-			<div className="Team Container">
-				<div className="Container-inner">
-					<h1>Команда <small>Кто создаёт экосистему Levelup?</small></h1>
-					<p className="primary">Над экосистемой Levelup трудятся десятки специалистов, но кто стоит за 
-					руководством каждого из проектов? Как говорится, Meet our team!</p>
-					<div className="team">
-						{this.renderUsers(users)}
+			<div className="page-team page">
+				<div className="">
+					<div className="block">
+						<div className="block-title left" id="prices">
+							<h5 className="super title">
+								Наша команда
+							</h5>
+							<p className="description">Те, кто трудятся над проектами Levelup</p>
+						</div>
 					</div>
-					<h2>Хотите стать частью команды?</h2>
-					<p className="primary">Наша команда находится в постоянном поиске инициативных личностей. </p>
-					<p className="primary">Предпочитаете
-					больше работу, нежели отдых? Умеете найти общий язык с коллегами и проникнуться идеей 
-					команды? Возможно, наша команда ищет именно вас!</p>
-					<br />
-					<br />
-					<Link to="/page/career" className="button">Вакансии</Link>
+					<div className="block">
+						<p className="primary">
+							Над экосистемой Levelup трудятся десятки специалистов, но кто стоит за 
+							руководством каждого из проектов? Как говорится, Meet our team!
+						</p>
+					</div>
+					<div className="block">
+						<div className="team">
+							{this.renderUsers(users)}
+						</div>
+					</div>
+					<div className="block">
+						<h2>Хотите стать частью команды?</h2>
+						<p className="primary">Наша команда находится в постоянном поиске инициативных личностей. </p>
+					</div>
+					<div className="block">	
+						<p className="primary">
+							Предпочитаете
+							больше работу, нежели отдых? Умеете найти общий язык с коллегами и проникнуться идеей 
+							команды? Возможно, наша команда ищет именно вас!
+						</p>
+					</div>
+					<div className="block">
+						<div className="button-group"><Link to="/page/career" className="button">Вакансии</Link></div>
+					</div>
 				</div>
 			</div>
 		);

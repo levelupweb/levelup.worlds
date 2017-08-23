@@ -63,13 +63,28 @@ class Partner extends Component {
 			}
 		]
 		return ( 
-			<div className="Partner Container">
-				<div className="Container-inner">
-					<h1>Партнёрам <small>Партнёрская программа</small></h1>
+			<div className="page page-partner">
+				<div className="block">
+					<div className="block-title left" id="prices">
+						<h5 className="super title">
+							Партнёрам
+						</h5>
+						<p className="description">Партнёрская программа</p>
+					</div>
+				</div>
+				<div className="block">
 					<p className="primary">Вы имеете большую клиентскую базу? Мы предлагаем вам возможность на этом заработать!</p>
+				</div>	
+				<div className="block">
 					<p className="primary">Суть партнёрской программы заключается в привлечении клиентов. Вы даёте нам заказчика, мы даём вам до 40% от сделки.</p>
+				</div>	
+				<div className="block">
 					<InformationTable items={informationTableItems} />
+				</div>	
+				<div className="block">
 					<p className="primary">Процент от сделки вычисляется индивидуально и требует отдельного рассмотрения. Начните работать с нами сегодня!</p>
+				</div>	
+				<div className="block">
 					<Modal options={contactModalConfiguration} render={renderContactForm()}>
 						<button className="button">Написать нам</button>
 					</Modal>

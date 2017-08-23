@@ -24,6 +24,20 @@
 	text-transform: uppercase;
 	vertical-align: middle;
 	cursor:pointer;
+	display:inline-block;
+}
+@media screen and (max-width: 497px) {
+	.button-group > * {
+		margin:10px 0px;
+		width:100%;
+	}
+	.button, .button.ghost {
+		display:block;
+		width:100%;
+	}
+	.button-group .button {
+		width:100%;
+	}
 }
 .button:hover {
 	border-color:#0012ff;

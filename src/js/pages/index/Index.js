@@ -58,8 +58,9 @@ class Index extends Component {
 	render() {
 		return (
 			<DefaultContainer>
-				<div className="Index Container fullpage">
-					<div className="Container-inner">
+				<section className="fullpage center blocks">
+					<div className="container text">
+						<div className="block">
 						<div
 							className="Jumbotron"
 							ref={e => {
@@ -89,6 +90,8 @@ class Index extends Component {
 								</span>
 							</div>
 						</div>
+						</div>
+						<div className="block">
 						<div
 							className="Proj"
 							ref={e => {
@@ -212,13 +215,16 @@ class Index extends Component {
 								</div>
 							</div>
 							<div className="center">
-								<span onClick={this.revealJumbotron} className="button">
-									Назад
-								</span>
+								<div className="button-group">
+									<button onClick={this.revealJumbotron} className="button">
+										Назад
+									</button>
+								</div>
 							</div>
 						</div>
+						</div>
 					</div>
-				</div>
+				</section>
 			</DefaultContainer>
 		);
 	}

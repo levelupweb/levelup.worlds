@@ -31,3 +31,17 @@
 		padding: 15px;
 	}
 }
+
+.footer.page {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top:1px solid #e1e1e1;
+  color:#444;
+  font-size:15px;
+  font-weight:100;
+}
+.footer.page .heart {
+  display:inline;
+  vertical-align: middle;
+}

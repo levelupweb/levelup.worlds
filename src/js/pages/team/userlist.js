@@ -47,5 +47,16 @@ export default [
 				link: 'https://vk.com/id59981707'
 			}
 		]
+	},
+	{
+		name: 'Марина',
+		description: 'Руководитель Levelup.Film',
+		image: 'img/marina-150x150.png',
+		socials: [
+			{
+				title: 'vk',
+				link: 'https://vk.com/id169477791'
+			}
+		]
 	}
 ]

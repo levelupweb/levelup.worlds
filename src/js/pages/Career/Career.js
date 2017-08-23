@@ -14,10 +14,19 @@ class Career extends Component {
 	}
 	render() {
 		return (
-			<div className="Career Container">
-				<div className="Container-inner">
+			<div className="page page-career">
+				<div className="block">
+					<div className="block-title left" id="prices">
+						<h5 className="super title">
+							Карьера в Levelup
+						</h5>
+						<p className="description">Открытые вакансии</p>
+					</div>
+				</div>
+				<div className="block">
 					<p className="primary">Хотите попробовать себя в роли нового члена команды Levelup? Возможно это ваш шанс обрести новый дружелюбный коллектив!</p>
-					<div className="divider"></div>
+				</div>
+				<div className="block">
 					<div className="positions">
 						{this.renderPositions(positions)}
 					</div>

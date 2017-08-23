@@ -60,20 +60,35 @@ const About = (props) => {
 		}
 	]
 	return (
-		<div className="About Container">
-			<div className="Container-inner">
-				<Socials visible={true} />
-				<h1>Levelup Worlds</h1>
+		<div className="page page-about">
+			<div className="block">
+				<div className="block-title left" id="prices">
+					<h5 className="super title">
+						О нас
+					</h5>
+					<p className="description">Что такое Levelup Worlds?</p>
+				</div>
+			</div>
+			<div className="block">
 				<p className="primary">
 					Levelup Worlds - это <b className="primary">Digital-агентство</b> полного цикла, которое уже 5-й год помогает малому и среднему бизнесу выполнять свою работу
 				</p>
+			</div>
+			<div className="block">
 				<p className="primary">
 					Мы помогаем привлекать клиентов, рассказывать о вашем продукте, создавать сам продукт, продумывать концепции продукта и ещё много чего интересного.
 				</p>
+			</div>
+			<div className="block">
 				<InformationTable items={informationTableItems} />
+			</div>
+			<div className="block">
 				<p className="primary">
+					<Socials visible={true} />
 					У вас есть деловое предложение? Напишите нам сегодня! Для этого вам необходимо просто нажать на кнопку ниже и следовать следующим инструкциям. Мы свяжемся с вами сразу, как это станет возможным
 				</p>
+			</div>
+			<div className="block">
 				<Modal options={contactModalConfiguration} render={renderContactForm()}>
 					<button className="button">Написать нам</button>
 				</Modal>

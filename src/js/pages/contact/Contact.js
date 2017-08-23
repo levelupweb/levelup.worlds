@@ -61,14 +61,27 @@ const Contact = () => {
 		}
 	]
 	return (
-		<div className="Contact Container">
-			<div className="Container-inner">
-				<h1>Контакты</h1>
+		<div className="page page-contact">
+			<div className="block">
+				<div className="block-title left" id="prices">
+					<h5 className="super title">
+						Контакты
+					</h5>
+					<p className="description">Как с нами связаться</p>
+				</div>
+			</div>
+			<div className="block">
 				<p className="primary">У вас есть деловое предложение? Свяжитесь с нами при помощи любого доступного вам способа, используя нашу контактную информацию</p>
+			</div>
+			<div className="block">
 				<InformationTable items={informationTableItems} />
+			</div>	
+			<div className="block">
 				<p className="primary">
 					Также вы можете написать нам письмо на почту. Оставьте свою контактную информацию, если вы ждёте ответа.
 				</p>
+			</div>
+			<div className="block">
 				<Modal options={contactModalConfiguration} render={renderContactForm()}>
 					<button className="button">Написать нам</button>
 				</Modal>

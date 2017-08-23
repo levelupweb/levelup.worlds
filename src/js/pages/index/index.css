@@ -89,3 +89,8 @@
 	opacity:1.0;
 	z-index:20;
 }
+@media screen and (max-height:654px) {
+	.Default .Footer {
+		display:none;
+	}
+}
