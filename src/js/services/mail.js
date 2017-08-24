@@ -10,7 +10,6 @@ class Mail {
 		this.url = url;
 	}
 	dispatchSend(html) {
-		console.log(this.url)
 		return axios({
 			method: "POST",
 			url: this.url,
@@ -25,15 +24,17 @@ class Mail {
 			}
 		}).then((response) => {
 			const { success, message } = response.data;
-			console.log(response)	
-		if(success) {
-				return NotificationManager.success(message, 'Успех');
+			if(success) {
+				NotificationManager.success(message, 'Успех');
+				return true
 			} else {
-				return NotificationManager.error(message, 'Ошибка');
+				NotificationManager.error(message, 'Ошибка');
+				return false
 			}
 		}).catch((err) => {
-			console.log(err)
-			return NotificationManager.error('Ошибка клиента', 'Ошибка');
+			console.log(err);
+			NotificationManager.error('Ошибка клиента', 'Ошибка');
+			return false
 		})
 	}
 }

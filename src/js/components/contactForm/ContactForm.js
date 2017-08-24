@@ -50,7 +50,10 @@ class ContactForm extends React.Component {
 	}
 	submitForm(e, html) {
 		e.preventDefault()
-		this.mail.dispatchSend(html)			
+		this.mail.dispatchSend(html)	
+		.then((did => {
+			if(did) this.form.reset()
+		}))	
 	}
 	render() {
 		const { message } = this.state;
