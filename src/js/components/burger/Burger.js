@@ -30,13 +30,13 @@ class Burger extends Component {
 				</p>
 				<nav className={revealed ? "navigation revealed" : "navigation"}>
 					<ul>
-						<Link
+						{/*<Link
 							to="/page/about"
 							onClick={() => {
 								this.revealNavigation();
 							}} >
 							<li>О нас</li>
-						</Link>
+						</Link>*/}
 						<Link
 							to="/page/partner"
 							onClick={() => {

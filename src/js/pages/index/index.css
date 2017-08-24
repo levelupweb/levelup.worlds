@@ -53,6 +53,10 @@
 .projects .project .title {
 	padding:0 15px;
 }
+.projects .project .title span {
+	margin:10px 0;
+	display:block;
+}
 .Jumbotron {
 	position:relative;
 	left:0px;

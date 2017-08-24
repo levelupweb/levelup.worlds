@@ -50,12 +50,12 @@
 	border-color:#000;
 }
 .button.ghost {
-	color:#000;
+	color:#0012ff;
 	border:0px;
 	background:transparent;
 	outline:none;
 	cursor:pointer;
-	border:1px solid transparent;
+	border:1px solid #0012ff;
 	transition:0.2s all ease;
 }
 .button.ghost:hover {

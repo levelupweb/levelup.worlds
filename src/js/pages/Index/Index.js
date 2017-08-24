@@ -115,7 +115,7 @@ class Index extends Component {
 												Name
 											</a>
 										</span>
-										<p>Современная блог-платформа</p>
+										<p>Блог-платформа </p>
 									</div>
 								</div>
 								<div className="project">
@@ -134,7 +134,7 @@ class Index extends Component {
 												Web
 											</a>
 										</span>
-										<p>Веб-разработка и веб-технологии</p>
+										<p>Веб-разработка и технологии</p>
 									</div>
 								</div>
 								<div className="project">
@@ -153,7 +153,7 @@ class Index extends Component {
 												Magazine
 											</a>
 										</span>
-										<p>Журнал о людях и их жизни</p>
+										<p>Мотивационное интернет-издание</p>
 									</div>
 								</div>
 								<div className="project">
@@ -172,7 +172,7 @@ class Index extends Component {
 												Music
 											</a>
 										</span>
-										<p>Музыкальный лейбл нового поколения</p>
+										<p>Музыкальный лейбл</p>
 									</div>
 								</div>
 								<div className="project">
@@ -188,10 +188,10 @@ class Index extends Component {
 									<div className="title">
 										<span className="spacing">
 											<a href="http://smm.levelupworlds.com/" target="_blank">
-												Promo
+												SMM
 											</a>
 										</span>
-										<p>Продвижение бизнеса в интернете</p>
+										<p>Social Media Marketing</p>
 									</div>
 								</div>
 								<div className="project">
@@ -210,16 +210,18 @@ class Index extends Component {
 												Film
 											</a>
 										</span>
-										<p>Профессиональная фото и видео съемка</p>
+										<p>Киностудия</p>
 									</div>
 								</div>
 							</div>
+							<div className="block">
 							<div className="center">
-								<div className="button-group">
-									<button onClick={this.revealJumbotron} className="button">
+								<div className="button-group" style={{justifyContent: 'center'}}>
+									<button onClick={this.revealJumbotron} className="button ghost">
 										Назад
 									</button>
 								</div>
+							</div>
 							</div>
 						</div>
 						</div>

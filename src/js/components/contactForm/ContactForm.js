@@ -21,6 +21,12 @@ class ContactForm extends React.Component {
 			message: {}
 		}
 	}
+	componentDidMount() {
+		this.form.addEventListener('submit', (e) => {
+			e.preventDefault();
+			return false
+		})
+	}
 	renderFields(fields) {
 		return fields.map((item, i) => <Field key={i} 
 			fieldName={item.fieldName}
@@ -50,7 +56,7 @@ class ContactForm extends React.Component {
 		const { message } = this.state;
 		const { fields, isFluid } = this.props;
 		return (
-			<form className={isFluid && 'fluid'}>
+			<form className={isFluid && 'fluid'} ref={{(e) => {this.form = e}}}>
 				{this.renderFields(fields)}
 				<button className="button" onClick={(e) => {this.submitForm(e, generateMailHTML(message))}}>Отправить</button>
 				<NotificationContainer />

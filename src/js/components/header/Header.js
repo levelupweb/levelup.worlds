@@ -6,10 +6,11 @@ const Header = props =>
 	<div className="header block">
 		<nav className="navigation">
 			<ul>
-				<Link
+				{/*<Link
+
 					to="/page/about">
 					<li>О нас</li>
-				</Link>
+				</Link> */}
 				<Link
 					to="/page/partner">
 					<li>Партнерам</li>
