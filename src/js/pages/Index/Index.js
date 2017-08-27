@@ -3,11 +3,10 @@ import React, { Component } from "react";
 import DefaultContainer from "../../containers/DefaultContainer.js";
 import Socials from "../../components/socials/Socials.js";
 import Typed from "typed.js";
-import ScrollReveal from "scrollreveal";
 import "./index.css";
 
 
-const prepareIndexPage = () => {
+const prepareIndexPage = (ScrollReveal) => {
 	var sr = ScrollReveal();
 	new Typed(".typed-text", {
 		stringsElement: "#description",
@@ -41,16 +40,22 @@ const prepareIndexPage = () => {
 };
 
 class Index extends Component {
+	constructor(props) {
+		super(props)
+		this.revealProjects = this.revealProjects.bind(this)
+		this.revealJumbotron = this.revealJumbotron.bind(this)
+	}
 	componentDidMount() {
-		prepareIndexPage();
+		const ScrollReveal = require('scrollreveal')
+		prepareIndexPage(ScrollReveal);
 	}
 
-	revealProjects = () => {
+	revealProjects() {
 		this.jumbotron.classList.add("hidden");
 		this.projects.classList.add("visible");
 	};
 
-	revealJumbotron = () => {
+	revealJumbotron() {
 		this.jumbotron.classList.remove("hidden");
 		this.projects.classList.remove("visible");
 	};

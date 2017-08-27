@@ -20,8 +20,13 @@
 	color:#000;
 	position:relative;
 }
+@media screen and (max-width:576px) {
+	.burger .navigation ul a li {
+		font-size:22px;
+	}
+}
 .burger .navigation a li:after {
-	width:13px;
+	width:1px;
 	height:13px;
 	background:#000;
 	content: '';
