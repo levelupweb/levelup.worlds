@@ -3,7 +3,7 @@ import SwitchCSSTransitionGroup from "switch-css-transition-group";
 import { withRouter } from "react-router";
 
 // components
-import Index from "../../pages/index/index.js";
+import Index from "../../pages/index/Index.js";
 import About from "../../pages/about/About.js";
 import Career from "../../pages/career/Career.js";
 import Contact from "../../pages/contact/Contact.js";
