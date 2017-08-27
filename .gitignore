@@ -2,7 +2,7 @@
 .env
 # dependencies
 /node_modules
-/dist
+/dist/bundle.js
 config.js
 # testing
 /coverage
