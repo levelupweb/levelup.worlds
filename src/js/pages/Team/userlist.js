@@ -1,8 +1,10 @@
+import config from '../../../../config.js'
+
 export default [
 	{
 		name: 'Иван',
 		description: 'Руководитель Levelup.Web',
-		image: 'img/vanya-150x150.png',
+		image: config.staticURL + '/img/vanya-150x150.png',
 		socials: [
 			{
 				title: 'vk',
@@ -25,7 +27,7 @@ export default [
 	{
 		name: 'Николас',
 		description: 'Руководитель Levelup.Worlds',
-		image: 'img/lucky-150x150.png',
+		image: config.staticURL + '/img/lucky-150x150.png',
 		socials: [
 			{
 				title: 'vk',
@@ -40,7 +42,7 @@ export default [
 	{
 		name: 'Дарина',
 		description: 'Руководитель Levelup.SMM',
-		image: 'img/darina-150x150.png',
+		image: config.staticURL + '/img/darina-150x150.png',
 		socials: [
 			{
 				title: 'vk',
@@ -51,7 +53,7 @@ export default [
 	{
 		name: 'Марина',
 		description: 'Руководитель Levelup.Film',
-		image: 'img/marina-150x150.png',
+		image: config.staticURL + '/img/marina-150x150.png',
 		socials: [
 			{
 				title: 'vk',

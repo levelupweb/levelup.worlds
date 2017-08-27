@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import config from '../../../../config.js'
 import "./header.css";
 
 const Header = props => 
@@ -12,25 +13,25 @@ const Header = props =>
 					<li>О нас</li>
 				</Link> */}
 				<Link
-					to="/page/partner">
+					to="/partner">
 					<li>Партнерам</li>
 				</Link>
 				<Link
-					to="/page/career">
+					to="/career">
 					<li>Карьера</li>
 				</Link>
 				<Link
-					to="/page/team">
+					to="/team">
 					<li>Команда</li>
 				</Link>
 				<Link
-					to="/page/contact">
+					to="/contact">
 					<li>Контакты</li>
 				</Link>
 			</ul>
 			<ul className="header-logo">
 				<Link to="/">
-					<img src="img/logo-default.png" alt="Levelup Web"/>
+					<img src={config.staticURL + '/img/logo-default.png'} alt="Levelup Web"/>
 				</Link>
 			</ul>	
 		</nav>
