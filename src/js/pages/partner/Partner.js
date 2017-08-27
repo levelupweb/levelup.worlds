@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import InformationTable from '../../components/informationTable/InformationTable.js'
 import ContactForm from '../../components/contactForm/ContactForm.js';
 import Modal from '../../components/modal/Modal.js';
+import config from '../../../../config.js'
 import './partner.css'
 
 const contactFormFields = [
@@ -44,19 +45,19 @@ class Partner extends Component {
 		}
 		const informationTableItems = [
 			{
-				image: 'img/marketing.png',
+				image: config.staticURL + '/img/marketing.png',
 				imageAlt: 'Приглашай клиентов',
 				title: 'Шаг 1',
 				description: 'Вы привлекаете клиентов любым способом'
 			}, 
 			{
-				image: 'img/buy.png',
+				image: config.staticURL + '/img/buy.png',
 				title: 'Шаг 2',
 				imageAlt: 'Клиент совершает покупку с вашим посредничеством',
 				description: 'Клиент совершает покупку с вашим посредничеством'
 			}, 
 			{
-				image: 'img/coins.png',
+				image: config.staticURL + '/img/coins.png',
 				title: 'Шаг 3',
 				imageAlt: 'Вы получаете деньги за сделку',
 				description: 'Вы получаете деньги за сделку'

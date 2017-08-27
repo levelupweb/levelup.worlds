@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-import DefaultContainer from "../../containers/DefaultContainer.js";
 import Socials from "../../components/socials/Socials.js";
 import Typed from "typed.js";
 import "./index.css";
+import config from '../../../../config.js'
 
 
 const prepareIndexPage = (ScrollReveal) => {
@@ -62,7 +62,7 @@ class Index extends Component {
 
 	render() {
 		return (
-			<DefaultContainer>
+			<div>
 				<section className="fullpage center blocks">
 					<div className="container text">
 						<div className="block">
@@ -75,7 +75,7 @@ class Index extends Component {
 							<Socials classNames="center" visible={false} />
 							<div className="logotype">
 								<img
-									src="img/logo-default.png"
+									src={config.staticURL + '/img/logo-default.png'}
 									width="55px"
 									alt="Levelup Worlds"
 								/>
@@ -103,12 +103,12 @@ class Index extends Component {
 								this.projects = e;
 							}}
 						>
-							<div className="projects">
+							<div className="projects block" style={{paddingBottom: 0, paddingTop:0}}>
 								<div className="project">
 									<div className="image">
 										<a href="http://levelup.name/" target="_blank">
 											<img
-												src="img/logo-name.png"
+												src={config.staticURL + '/img/logo-name.png'}
 												width="64px"
 												alt="Levelup Name"
 											/>
@@ -127,7 +127,7 @@ class Index extends Component {
 									<div className="image">
 										<a href="http://web.levelupworlds.com/" target="_blank">
 											<img
-												src="img/logo-web.png"
+												src={config.staticURL + '/img/logo-web.png'}
 												width="64px"
 												alt="Levelup Web"
 											/>
@@ -146,7 +146,7 @@ class Index extends Component {
 									<div className="image">
 										<a href="http://levelupmag.com/" target="_blank">
 											<img
-												src="img/logo-magazine.png"
+												src={config.staticURL + '/img/logo-magazine.png'}
 												width="64px"
 												alt="Levelup Magazine"
 											/>
@@ -165,7 +165,7 @@ class Index extends Component {
 									<div className="image">
 										<a href="http://levelupmusic.com/" target="_blank">
 											<img
-												src="img/logo-music.png"
+												src={config.staticURL + '/img/logo-music.png'}
 												width="64px"
 												alt="Levelup Music"
 											/>
@@ -184,7 +184,7 @@ class Index extends Component {
 									<div className="image">
 										<a href="http://smm.levelupworlds.com/" target="_blank">
 											<img
-												src="img/logo-promo.png"
+												src={config.staticURL + '/img/logo-promo.png'}
 												width="64px"
 												alt="Levelup Promo"
 											/>
@@ -203,7 +203,7 @@ class Index extends Component {
 									<div className="image">
 										<a href="http://film.levelupworlds.com/" target="_blank">
 											<img
-												src="img/logo-film.png"
+												src={config.staticURL + '/img/logo-film.png'}
 												width="64px"
 												alt="Levelup Promo"
 											/>
@@ -219,20 +219,20 @@ class Index extends Component {
 									</div>
 								</div>
 							</div>
-							<div className="block">
-							<div className="center">
-								<div className="button-group" style={{justifyContent: 'center'}}>
-									<button onClick={this.revealJumbotron} className="button ghost">
-										Назад
-									</button>
+							<div className="block" style={{paddingTop: 0}}>
+								<div className="center">
+									<div className="button-group" style={{justifyContent: 'center'}}>
+										<button onClick={this.revealJumbotron} className="button ghost">
+											Назад
+										</button>
+									</div>
 								</div>
-							</div>
 							</div>
 						</div>
 						</div>
 					</div>
 				</section>
-			</DefaultContainer>
+			</div>
 		);
 	}
 }

@@ -2,7 +2,7 @@ import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
 import StaticRouter from 'react-router-dom/StaticRouter';
-import App from './src/App.js'
+import App from './src/js/components/app/App.js'
 import generateHTML from './generateHTML.js'
 import path from 'path'
 import { Helmet } from 'react-helmet'

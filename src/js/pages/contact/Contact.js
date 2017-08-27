@@ -2,6 +2,7 @@ import React from 'react';
 import ContactForm from '../../components/contactForm/ContactForm.js';
 import Modal from '../../components/modal/Modal.js';
 import InformationTable from '../../components/informationTable/InformationTable.js'
+import config from '../../../../config.js'
 
 const contactFormFields = [
 	{
@@ -44,18 +45,18 @@ const Contact = () => {
 
 	const informationTableItems = [
 		{
-			image: 'img/smartphone.png',
+			image: config.staticURL + '/img/smartphone.png',
 			imageSize: 64,
 			imageAlt: 'Контктный телефон',
 			description: '(903) 634-69-29'
 		},
 		{
-			image: 'img/placeholder.png',
+			image: config.staticURL + '/img/placeholder.png',
 			imageAlt: 'Адрес',
 			description: 'г. Москва, Пресненская наб., 6, стр. 2'
 		},
 		{
-			image: 'img/paper-plane.png',
+			image: config.staticURL + '/img/paper-plane.png',
 			imageAlt: 'Почта',
 			description: 'levelupworlds@gmail.com'
 		}

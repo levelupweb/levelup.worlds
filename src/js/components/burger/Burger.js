@@ -12,7 +12,7 @@ class Burger extends Component {
 
 	revealNavigation() {
 		if (!this.props.visible) {
-		  document.querySelector(".Wrapper").classList.toggle("with-menu");
+		  document.querySelector(".site-content").classList.toggle("with-menu");
 		} 
 		
 		this.setState({
@@ -38,28 +38,28 @@ class Burger extends Component {
 							<li>О нас</li>
 						</Link>*/}
 						<Link
-							to="/page/partner"
+							to="/partner"
 							onClick={() => {
 								this.revealNavigation();
 							}} >
 							<li>Партнерам</li>
 						</Link>
 						<Link
-							to="/page/partner"
+							to="/partner"
 							onClick={() => {
 								this.revealNavigation();
 							}} >
 							<li>Карьера</li>
 						</Link>
 						<Link
-							to="/page/team"
+							to="/team"
 							onClick={() => {
 								this.revealNavigation();
 							}} >
 							<li>Команда</li>
 						</Link>
 						<Link
-							to="/page/contact"
+							to="/contact"
 							onClick={() => {
 								this.revealNavigation();
 							}} >

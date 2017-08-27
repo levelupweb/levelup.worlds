@@ -45,7 +45,7 @@ export default class Team extends Component {
 						</p>
 					</div>
 					<div className="block">
-						<div className="button-group"><Link to="/page/career" className="button">Вакансии</Link></div>
+						<div className="button-group"><Link to="/career" className="button">Вакансии</Link></div>
 					</div>
 				</div>
 			</div>
