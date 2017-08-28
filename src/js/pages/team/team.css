@@ -45,4 +45,12 @@
 }
 .team .item .socials {
 	margin-top:15px;
+	display:none;
+	list-style-type:none;
+	padding:0px;
+	margin-left:0;
+	margin-right:0;
+}
+.team .item .socials.visible {
+	display:block;
 }

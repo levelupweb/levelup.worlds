@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../../components/socials/socials.css";
+import "./team.css"
 
 export default class Item extends Component {
 	renderSocials(socials) {
@@ -17,7 +18,7 @@ export default class Item extends Component {
 	render() {
 		const { name, description, socials, image } = this.props.user;
 		return (
-			<div className="item">
+			<div className="item user">
 				<img src={image} className="image" alt={name} />
 				<div className="content">
 					<div className="name"><h3>{name}</h3></div>
