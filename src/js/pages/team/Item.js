@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import "../../components/socials/socials.css";
+
 export default class Item extends Component {
 	renderSocials(socials) {
 		return socials.map((item, i) => {
 			const { link, title } = item;
-			return <a key={i} href={link} target="_blank">
+			return <a className="social" key={i} href={link} target="_blank">
 				<li><i className={`fa fa-${title}`} href={link}></i>
 			</li></a>
 		})
@@ -21,7 +23,7 @@ export default class Item extends Component {
 					<div className="name"><h3>{name}</h3></div>
 					<div className="description">{description}</div>
 					<div className="button small" onClick={(e) => {this.revealSocials(e)}}>Follow</div>
-					<ul className="socials list center" ref={(e) => {this.socials = e}}>
+					<ul className="socials center" ref={(e) => {this.socials = e}}>
 				    {this.renderSocials(socials)}
 					</ul>
 				</div>
