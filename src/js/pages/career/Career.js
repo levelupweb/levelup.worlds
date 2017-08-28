@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Position from './Position.js'
 import positions from './positions.js'
+import { Helmet } from 'react-helmet'
 import './career.css'
 
 class Career extends Component {
@@ -15,6 +16,10 @@ class Career extends Component {
 	render() {
 		return (
 			<div className="page page-career">
+				<Helmet>
+        	<title>Карьера в Levelup Worlds</title>
+        	<meta name="description" content="Карьера в Levelup Worlds. Digital-студия полного цикла" />
+    		</Helmet>
 				<div className="block">
 					<div className="block-title left" id="prices">
 						<h5 className="super title">

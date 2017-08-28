@@ -3,6 +3,7 @@ import ContactForm from '../../components/contactForm/ContactForm.js';
 import Modal from '../../components/modal/Modal.js';
 import InformationTable from '../../components/informationTable/InformationTable.js';
 import Socials from '../../components/socials/Socials.js'
+import { Helmet } from 'react-helmet'
 
 const contactFormFields = [
 	{
@@ -61,6 +62,10 @@ const About = (props) => {
 	]
 	return (
 		<div className="page page-about">
+			<Helmet>
+      	<title>О нас - Levelup Worlds</title>
+      	<meta name="description" content="О компании Levelup Worlds. Digital-студия полного цикла" />
+  		</Helmet>
 			<div className="block">
 				<div className="block-title left" id="prices">
 					<h5 className="super title">

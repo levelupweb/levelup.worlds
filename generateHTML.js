@@ -33,12 +33,16 @@ const generateHTML = (html, helmet) =>
     <link rel="icon" type="image/png" sizes="16x16" href="${dist}/favicon/favicon-16x16.png">
     ${helmet.title.toString()}
     ${helmet.meta.toString()}
+    <meta name="keywords" content="звук студия, фото съемка, видео съемка, сведение звука, веб-разработка, веб агентство, создать веб-приложение, разработка приложений, купить сайт, создать сайт в студии под ключ, сайт под ключ купить" />
+    <meta name="author" content="Levelup Web" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="1 days" />
     <meta property="og:locale" content="ru_RU">
-    <meta property="og:image" content="SITE IMAGE 537 240">
+    <meta property="og:image" content="${dist}/img/opengraphimage.png">
     <meta property="og:image:width" content="537">
-    <meta property="og:site_name" content="SITE NAME" />
-    <meta property="og:title" content="SITE TITLE" />
-    <meta property="og:description" content="SITE DESCRIPTION" />
+    <meta property="og:site_name" content="Levelup Worlds" />
+    <meta property="og:title" content="Levelup Worlds" />
+    <meta property="og:description" content="Digital-студия полного цикла" />
     <meta property="og:image:height" content="240">
   </head>
   <body>

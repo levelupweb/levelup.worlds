@@ -3,6 +3,7 @@ import InformationTable from '../../components/informationTable/InformationTable
 import ContactForm from '../../components/contactForm/ContactForm.js';
 import Modal from '../../components/modal/Modal.js';
 import config from '../../../../config.js'
+import { Helmet } from 'react-helmet'
 import './partner.css'
 
 const contactFormFields = [
@@ -65,6 +66,10 @@ class Partner extends Component {
 		]
 		return ( 
 			<div className="page page-partner">
+				<Helmet>
+      		<title>Партнёрам - Levelup Worlds</title>
+      		<meta name="description" content="Предложение для партнёров Levelup Worlds. Digital-студия полного цикла" />
+  			</Helmet>
 				<div className="block">
 					<div className="block-title left" id="prices">
 						<h5 className="super title">

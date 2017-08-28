@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Item from './Item.js'
 import { Link } from 'react-router-dom'
 import users from './userlist.js'
+import { Helmet } from 'react-helmet'
 import './team.css'
 
 export default class Team extends Component {
@@ -13,6 +14,10 @@ export default class Team extends Component {
 	render() {
 		return (
 			<div className="page-team page">
+				<Helmet>
+      		<title>Команда - Levelup Worlds</title>
+      		<meta name="description" content="Наша команда Levelup Worlds. Digital-студия полного цикла" />
+  			</Helmet>
 				<div className="">
 					<div className="block">
 						<div className="block-title left" id="prices">

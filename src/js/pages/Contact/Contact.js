@@ -3,36 +3,31 @@ import ContactForm from '../../components/contactForm/ContactForm.js';
 import Modal from '../../components/modal/Modal.js';
 import InformationTable from '../../components/informationTable/InformationTable.js'
 import config from '../../../../config.js'
+import Helmet from 'react-helmet';
 
-const contactFormFields = [
-	{
+const contactFormFields = [{
 		fieldName: 'Имя клиента',
 		placeholder: 'Ваше имя',
 		name: 'userName',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'E-Mail',
 		placeholder: 'Ваш E-Mail',
 		name: 'userEmail',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'Мобильный телефон',
 		placeholder: 'Контактный телефон',
 		name: 'userPhone',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'Сообщение',
 		placeholder: 'Ваше сообщение',
 		name: 'userMessage',
 		type: 'textarea'
-	}
-]
+} ]
 
 const Contact = () => {
-
 	const renderContactForm = () => <ContactForm 
 		isFluid={true} 
 		fields={contactFormFields} />
@@ -43,26 +38,13 @@ const Contact = () => {
 		content: 'С вашими деловыми предложениями вы можете обращаться при помощи данной формы обратной связи'
 	}
 
-	const informationTableItems = [
-		{
-			image: config.staticURL + '/img/smartphone.png',
-			imageSize: 64,
-			imageAlt: 'Контктный телефон',
-			description: '(903) 634-69-29'
-		},
-		{
-			image: config.staticURL + '/img/placeholder.png',
-			imageAlt: 'Адрес',
-			description: 'г. Москва, Пресненская наб., 6, стр. 2'
-		},
-		{
-			image: config.staticURL + '/img/paper-plane.png',
-			imageAlt: 'Почта',
-			description: 'levelupworlds@gmail.com'
-		}
-	]
 	return (
 		<div className="page page-contact">
+			<Helmet>
+        <title>Контакты - Levelup Worlds</title>
+        <meta name="description" content="Контакты Levelup Worlds. Студия веб-разработок" />
+    		<meta name="keywords" content="веб-разработка, веб агентство, создать веб-приложение, разработка приложений, купить сайт, создать сайт в студии под ключ, сайт под ключ купить" />
+    	</Helmet>
 			<div className="block">
 				<div className="block-title left" id="prices">
 					<h5 className="super title">
@@ -75,7 +57,32 @@ const Contact = () => {
 				<p className="primary">У вас есть деловое предложение? Свяжитесь с нами при помощи любого доступного вам способа, используя нашу контактную информацию</p>
 			</div>
 			<div className="block">
-				<InformationTable items={informationTableItems} />
+				<div className="list">
+					<div className="item">
+						<div className="icon">
+							<img src={config.staticURL + "/img/paper-plane.png"} alt="Почта"/>
+						</div>
+						<div className="content">
+							hh@levelupworlds.com
+						</div>
+					</div>
+					<div className="item">
+						<div className="icon">
+							<img src={config.staticURL + "/img/placeholder.png"} alt="Адрес"/>
+						</div>
+						<div className="content">
+							г. Москва, Пресненская наб., 6, стр. 2
+						</div>
+					</div>
+					<div className="item">
+						<div className="icon">
+							<img src={config.staticURL + "/img/smartphone.png"} alt="Мобильный телефон"/>
+						</div>
+						<div className="content">
+							(903) 634-69-29
+						</div>
+					</div>
+				</div>
 			</div>	
 			<div className="block">
 				<p className="primary">
