@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../../css/list.css';
+
 
 const Socials = (props) => {
 	return <ul className={(props.visible) ? `visible list socials ${props.classNames}` : `socials list ${props.classNames}`}>

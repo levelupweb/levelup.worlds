@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../../../css/list.css'
 export default class Item extends Component {
 	renderSocials(socials) {
 		return socials.map((item, i) => {
