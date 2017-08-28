@@ -1,0 +1,69 @@
+.InformationTable {
+	display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  flex-wrap:wrap;
+  align-items: flex-start;
+}
+.InformationTableItem {
+	text-align:center;
+	width:32%;
+	margin-bottom:25px;
+}
+.InformationTableItem:last-child {
+	margin-right:0px;
+}
+.InformationTableItem-head {
+	font-size:35px;
+	color:#000;
+	font-weight:bold;
+}
+.InformationTableItem-title {
+	font-size:16px;
+	font-weight:bold;
+	letter-spacing: 3px;
+	margin-top:15px;
+	color:#000;
+}
+.InformationTableItem-description {
+	color:#555;
+	font-size:14px;
+	margin-top:5px;
+}
+@media screen and (max-width:552px) {
+	.InformationTable {
+		flex-direction:row;
+		align-items:center;
+		justify-content:center;
+	}
+	.InformationTableItem {
+		margin:0px;
+		width:50%;
+		text-align:center;
+		margin-bottom:25px;
+	}
+}
+@media screen and (max-width:356px) {
+	.InformationTable {
+		flex-direction:column;
+		align-items:center;
+		justify-content:center;
+	}
+	.InformationTableItem {
+		margin:0px;
+		width:100%;
+		text-align:center;
+		margin-bottom:25px;
+	}
+}
