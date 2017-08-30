@@ -57,20 +57,10 @@
 }
 .Jumbotron {
 	position:relative;
-	left:0px;
-	top:0px;
-	opacity:1.0;
 	transition:0.2s all ease;
 }
-.Jumbotron.hidden {
-	opacity:0;
-	z-index:-10;
-}
 .Jumbotron-actions {
-	position:absolute;
-	top:100%;
-	margin-top:15px;
-	left:0px;
+	margin-top:20px;
 	width:100%;
 	display:flex;
 	align-items:center;
@@ -78,22 +68,32 @@
 	align-items:center;
 }
 .Proj {
-	opacity:0;
-	position:absolute;
-	left:0px;
-	top:0;
-	margin-top:-140px;
-	z-index:-10;
-	transition:0.2s all ease;
 	width:100%;
 	max-width:100%;
-}
-.Proj.visible {
-	opacity:1.0;
-	z-index:20;
 }
 @media screen and (max-height:654px) {
 	.Default .Footer {
 		display:none;
 	}
+}
+
+.fade-wait-leave {
+  opacity: 1;
+}
+.fade-wait-leave.fade-wait-leave-active {
+  opacity: 0;
+  transition: opacity .4s ease-in;
+}
+
+.fade-wait-enter {
+  opacity: 0;
+}
+.fade-wait-enter.fade-wait-enter-active {
+  opacity: 1;
+  /* Delay the enter animation until the leave completes */
+  transition: opacity .4s ease-in .6s;
+}
+
+.fade-wait-height {
+  transition: height .6s ease-in-out;
 }

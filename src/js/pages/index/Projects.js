@@ -1,0 +1,133 @@
+import React from 'react';
+import config from '../../../../config.js'
+
+const Projects = props =>
+	<div className="Proj">
+		<div className="projects block" style={{paddingBottom: 0, paddingTop:0}}>
+			<div className="project">
+				<div className="image">
+					<a href="http://levelup.name/" target="_blank">
+						<img
+							src={config.staticURL + '/img/logo-name.png'}
+							width="64px"
+							alt="Levelup Name"
+						/>
+					</a>
+				</div>
+				<div className="title">
+					<span className="spacing">
+						<a href="http://levelup.name/" target="_blank">
+							Name
+						</a>
+					</span>
+					<p>Блог-платформа </p>
+				</div>
+			</div>
+			<div className="project">
+				<div className="image">
+					<a href="http://web.levelupworlds.com/" target="_blank">
+						<img
+							src={config.staticURL + '/img/logo-web.png'}
+							width="64px"
+							alt="Levelup Web"
+						/>
+					</a>
+				</div>
+				<div className="title">
+					<span className="spacing">
+						<a href="http://web.levelupworlds.com" target="_blank">
+							Web
+						</a>
+					</span>
+					<p>Веб-разработка и технологии</p>
+				</div>
+			</div>
+			<div className="project">
+				<div className="image">
+					<a href="http://levelupmag.com/" target="_blank">
+						<img
+							src={config.staticURL + '/img/logo-magazine.png'}
+							width="64px"
+							alt="Levelup Magazine"
+						/>
+					</a>
+				</div>
+				<div className="title">
+					<span className="spacing">
+						<a href="http://levelupmag.com/" target="_blank">
+							Magazine
+						</a>
+					</span>
+					<p>Мотивационное интернет-издание</p>
+				</div>
+			</div>
+			<div className="project">
+				<div className="image">
+					<a href="http://music.levelupworlds.com/" target="_blank">
+						<img
+							src={config.staticURL + '/img/logo-music.png'}
+							width="64px"
+							alt="Levelup Music"
+						/>
+					</a>
+				</div>
+				<div className="title">
+					<span className="spacing">
+						<a href="http://levelupmusic.com/" target="_blank">
+							Music
+						</a>
+					</span>
+					<p>Музыкальный лейбл</p>
+				</div>
+			</div>
+			<div className="project">
+				<div className="image">
+					<a href="http://smm.levelupworlds.com/" target="_blank">
+						<img
+							src={config.staticURL + '/img/logo-promo.png'}
+							width="64px"
+							alt="Levelup Promo"
+						/>
+					</a>
+				</div>
+				<div className="title">
+					<span className="spacing">
+						<a href="http://smm.levelupworlds.com/" target="_blank">
+							SMM
+						</a>
+					</span>
+					<p>Social Media Marketing</p>
+				</div>
+			</div>
+			<div className="project">
+				<div className="image">
+					<a href="http://film.levelupworlds.com/" target="_blank">
+						<img
+							src={config.staticURL + '/img/logo-film.png'}
+							width="64px"
+							alt="Levelup Promo"
+						/>
+					</a>
+				</div>
+				<div className="title">
+					<span className="spacing">
+						<a href="http://film.levelupworlds.com/" target="_blank">
+							Film
+						</a>
+					</span>
+					<p>Киностудия</p>
+				</div>
+			</div>
+		</div>
+		<div className="block" style={{paddingTop: 0}}>
+			<div className="center">
+				<div className="button-group" style={{justifyContent: 'center'}}>
+					<button onClick={() => {props.changeSection('jumbotron')}} className="button ghost">
+						Назад
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+export default Projects

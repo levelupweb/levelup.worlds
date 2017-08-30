@@ -1,7 +1,7 @@
 const config = new function() {
 const config = this;
 
-this.dev = false;
+this.dev = true;
 this.ssl = false;
 this.port = "3060";
 this.staticFolder = "/dist"
