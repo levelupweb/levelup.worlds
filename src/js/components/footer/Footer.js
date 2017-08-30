@@ -8,7 +8,7 @@ export default class Footer extends Component {
 			return (
 				<div className="footer">
 					<div className="footer-wrapper">
-						<p className="spacing">Создано с любовью в Levelup Web</p>
+						<p className="spacing">Создано с любовью в <a href="http://web.levelupworlds.com" target="_blank">Levelup Web</a></p>
 					</div>
 				</div>
 			);

@@ -39,7 +39,7 @@ class Index extends Component {
 		const { currentSection } = this.state;
 		return (
 			<div>
-				<section className="fullpage center blocks">
+				<section className="fullpage center blocks" style={{borderBottom:0}}>
 					<div className="container text">
 						<div className="block">
 							<ReactCSSTransitionReplace 

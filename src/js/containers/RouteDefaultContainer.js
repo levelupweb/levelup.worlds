@@ -15,6 +15,7 @@ const RouteDefaultContainer = ({ component, match }) =>
 					<div className="site-content">
 						{React.createElement(component)}
 					</div>
+					<Footer />
 				</div>
 			);
 		}}

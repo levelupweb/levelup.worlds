@@ -30,9 +30,6 @@
 	.projects .project p {
 		display:none;
 	}
-	.Proj {
-		margin-top:-56px!important;
-	}
 }
 .projects a {
 	color:#000;
@@ -46,7 +43,7 @@
 	transition: 0.2s all ease;
 }
 .projects .project:hover {
-	transform:scale(1.1);
+	transform:scale(0.9);
 }
 .projects .project .title {
 	padding:0 15px;
@@ -76,7 +73,6 @@
 		display:none;
 	}
 }
-
 .fade-wait-leave {
   opacity: 1;
 }

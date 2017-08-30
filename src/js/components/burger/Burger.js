@@ -45,7 +45,7 @@ class Burger extends Component {
 				<nav className={revealed ? "navigation revealed" : "navigation"}>
 					<ul>
 						<Link
-							to="/page/about"
+							to="/about"
 							onClick={() => {
 								this.revealNavigation();
 							}} >

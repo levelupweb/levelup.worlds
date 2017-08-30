@@ -1,5 +1,6 @@
 import React from 'react';
 import config from '../../../../config.js'
+import { Link } from 'react-router-dom'
 
 const Projects = props =>
 	<div className="Proj">
@@ -20,7 +21,7 @@ const Projects = props =>
 							Name
 						</a>
 					</span>
-					<p>Блог-платформа </p>
+					<p>Блог-платформа</p>
 				</div>
 			</div>
 			<div className="project">
@@ -39,7 +40,7 @@ const Projects = props =>
 							Web
 						</a>
 					</span>
-					<p>Веб-разработка и технологии</p>
+					<p>Веб-студия</p>
 				</div>
 			</div>
 			<div className="project">
@@ -58,7 +59,7 @@ const Projects = props =>
 							Magazine
 						</a>
 					</span>
-					<p>Мотивационное интернет-издание</p>
+					<p>Мотивационный журнал</p>
 				</div>
 			</div>
 			<div className="project">
@@ -73,7 +74,7 @@ const Projects = props =>
 				</div>
 				<div className="title">
 					<span className="spacing">
-						<a href="http://levelupmusic.com/" target="_blank">
+						<a href="http://music.levelupworlds.com/" target="_blank">
 							Music
 						</a>
 					</span>
@@ -96,7 +97,7 @@ const Projects = props =>
 							SMM
 						</a>
 					</span>
-					<p>Social Media Marketing</p>
+					<p>Продвижение в сетях</p>
 				</div>
 			</div>
 			<div className="project">
@@ -122,9 +123,14 @@ const Projects = props =>
 		<div className="block" style={{paddingTop: 0}}>
 			<div className="center">
 				<div className="button-group" style={{justifyContent: 'center'}}>
-					<button onClick={() => {props.changeSection('jumbotron')}} className="button ghost">
+					<button onClick={() => {props.changeSection('jumbotron')}} className="button">
 						Назад
 					</button>
+					<Link to="/contact">
+						<button className="button">
+							Сотрудничество
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
