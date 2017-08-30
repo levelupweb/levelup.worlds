@@ -35,7 +35,7 @@ export default class Field extends Component {
 					}
 					<textarea 
 						onInput={(e) => {onInput(name, fieldName, e.target.value)}}
-						ref={(e) => {this.input = e}} 
+						ref={(e) => {this.input = e}}
 						onBlur={() => {this.makeUnactive()}} 
 						onFocus={() => {this.makeActive()}} 
 						name={name} 
@@ -46,6 +46,7 @@ export default class Field extends Component {
 				return (<div className={isActive ? 'field active' : 'field'}>
 					<label onClick={() => {this.makeActive()}} >{placeholder}</label>
 					<input 
+						defaultValue={''}
 						onInput={(e) => {onInput(name, fieldName, e.target.value)}}
 						ref={(e) => {this.input = e}} 
 						onBlur={() => {this.makeUnactive()}} 

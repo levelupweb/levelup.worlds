@@ -26,7 +26,7 @@ class Modal extends Component {
 				<div className={isRevealed ? 'Modal open' : 'Modal'}>
 					<div className="Modal-wrapper inverted">
 						<div className="Modal-closer">
-							<button className="button ghost" onClick={this.reveal}>Закрыть</button>
+							<button className="button ghost" onClick={() => {this.reveal()}}>Закрыть</button>
 						</div>
 						<div className="Modal-title">
 							<div className="block">

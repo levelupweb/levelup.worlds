@@ -6,37 +6,40 @@ import config from '../../../../config.js'
 import { Helmet } from 'react-helmet'
 import './partner.css'
 
-const contactFormFields = [
-	{
+const contactFormFields = [ {
 		fieldName: 'Имя клиента',
 		placeholder: 'Ваше имя',
 		name: 'userName',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'E-Mail',
 		placeholder: 'Ваш E-Mail',
 		name: 'userEmail',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'Мобильный телефон',
 		placeholder: 'Контактный телефон',
 		name: 'userPhone',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'Сообщение',
 		placeholder: 'Ваше сообщение',
 		name: 'userMessage',
 		type: 'textarea'
-	}
-]
+}]
+
+const contactFormRules = {
+	userName: ['required'],
+	userEmail: ['required', 'email'],
+	userPhone: ['required', 'mobile'],
+	userMessage: ['required']
+}
 
 class Partner extends Component {
 	render() {
 		const renderContactForm = () => <ContactForm 
 			isFluid={true} 
+			rules={contactFormRules}
 			fields={contactFormFields} />
 
 		const contactModalConfiguration = {

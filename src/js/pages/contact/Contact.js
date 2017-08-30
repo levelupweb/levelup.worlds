@@ -27,10 +27,19 @@ const contactFormFields = [{
 		type: 'textarea'
 } ]
 
+const contactFormRules = {
+	userName: ['required'],
+	userEmail: ['required', 'email'],
+	userPhone: ['required', 'mobile'],
+	userMessage: ['required']
+}
+
 const Contact = () => {
 	const renderContactForm = () => <ContactForm 
 		isFluid={true} 
-		fields={contactFormFields} />
+		rules={contactFormRules}
+		fields={contactFormFields} 
+	/>
 
 	const contactModalConfiguration = {
 		title: 'Обратная связь',

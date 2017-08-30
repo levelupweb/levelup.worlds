@@ -10,47 +10,50 @@ const contactModalConfiguration = {
 	content: 'Оставьте свою контактную информацию, а также рекомендуем прикрепить своё резюме, чтобы увеличить шансы на ответ!'
 }
 
-const contactFormFields = [
-	{
+const contactFormFields = [{
 		fieldName: 'Имя клиента',
 		placeholder: 'Ваше имя',
 		name: 'userName',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'E-Mail',
 		placeholder: 'Ваш E-Mail',
 		name: 'userEmail',
 		type: 'text'
-	},
-	{
+	}, {
 		fieldName: 'Мобильный телефон',
 		placeholder: 'Контактный телефон',
 		name: 'userPhone',
 		type: 'text'
-	},
-	{
+	}, {
 		placeholder: 'Ссылка на резюме',
 		name: 'userResume',
 		type: 'text',
 		fieldName: 'Ссылка на резюме клиента'		
-	}, 
-	{
+	}, {
 		placeholder: 'Ссылка на портфолио',
 		name: 'userPortfolio',
 		type: 'text',
 		fieldName: 'Ссылка на резюме клиента'
-	},
-	{
+	}, {
 		fieldName: 'Сообщение',
 		placeholder: 'Ваше сообщение',
 		name: 'userMessage',
 		type: 'textarea'
-	}
-]
+}]
+
+const positionFormRules = {
+	userName: ['required'],
+	userEmail: ['required', 'email'],
+	userPhone: ['required', 'mobile'],
+	userResume: ['required', 'url'],
+	userPortfolio: ['required', 'url'],
+	userMessage: ['required']
+}
 
 const renderContactForm = () => <ContactForm 
 	isFluid={true} 
+	rules={positionFormRules}
 	fields={contactFormFields} />
 
 export default class Position extends Component {

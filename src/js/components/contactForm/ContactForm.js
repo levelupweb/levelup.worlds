@@ -3,7 +3,7 @@ import Field from '../field/Field.js';
 import Mail from '../../services/mail.js'
 import config from '../../../../config.js'
 import generateMailHTML from '../../templates/mail.js'
-import { NotificationContainer } from 'react-notifications';
+import validateForm from './validation.js';
 import "./contactForm.css"
 import 'react-notifications/lib/notifications.css';
 
@@ -15,13 +15,25 @@ class ContactForm extends React.Component {
 		this.submitForm = this.submitForm.bind(this);
 		this.renderFields = this.renderFields.bind(this);
 		this.state = {
-			message: {}
+			message: {},
+			errors: []
 		}
 	}
 	componentDidMount() {
+		const { fields } = this.props;
 		this.form.addEventListener('submit', (e) => {
 			e.preventDefault();
 			return false
+		})
+		let defaultMessage = {}
+		fields.map((field) => {
+			defaultMessage = {
+				...defaultMessage,
+				[field.name]: { fieldName: field.fieldName, value: '' }
+			}
+		})
+		this.setState({
+			message: defaultMessage
 		})
 	}
 	renderFields(fields) {
@@ -36,30 +48,39 @@ class ContactForm extends React.Component {
 	}
 	updateForm(key, fieldName, value) {
 		this.setState({
+			...this.state,
 			message: {
 				...this.state.message,
-				[key]: {
-					fieldName,
-					value
-				}
+				[key]: { fieldName, value }
 			}
 		})
 	}
-	submitForm(e, html) {
-		e.preventDefault()
-		this.mail.dispatchSend(html)	
-		.then((did => {
-			if(did) this.form.reset()
-		}))	
+	submitForm(e, message, rules) {
+		e.preventDefault();
+		validateForm(message, rules, err => {
+			if(err.length) return this.setState({
+				errors: err
+			})
+			const html = generateMailHTML(message);
+			this.mail.dispatchSend(html)	
+			.then((did => {
+				if(did) this.form.reset()
+			}))
+		})
+	}
+	renderErrors(errors) {
+		return <ul>
+			{errors.map((item, i) => <li key={i}>{item}</li>)}
+		</ul>
 	}
 	render() {
-		const { message } = this.state;
-		const { fields, isFluid } = this.props;
+		const { message, errors } = this.state;
+		const { fields, isFluid, rules } = this.props;
 		return (
 			<form className={isFluid && 'fluid'} ref={(e) => {this.form = e}}>
+				{this.renderErrors(errors)}
 				{this.renderFields(fields)}
-				<button className="button" onClick={(e) => {this.submitForm(e, generateMailHTML(message))}}>Отправить</button>
-				<NotificationContainer />
+				<button className="button ghost" onClick={(e) => {this.submitForm(e, message, rules)}}>Отправить</button>
 			</form>
 		)
 	}
