@@ -1,46 +1,29 @@
 import React from 'react';
-import ContactForm from '../../components/contactForm/ContactForm.js';
-import Modal from '../../components/modal/Modal.js';
-import InformationTable from '../../components/informationTable/InformationTable.js'
-import config from '../../../../config.js'
+import ContactForm from '../../components/contactForm';
+import Modal from '../../components/modal';
+import InformationTable from '../../components/informationTable';
+import config from '../../utils/config';
 import Helmet from 'react-helmet';
 
 const contactFormFields = [{
-		fieldName: 'Имя клиента',
 		placeholder: 'Ваше имя',
-		name: 'userName',
+		name: 'name',
 		type: 'text'
 	}, {
-		fieldName: 'E-Mail',
 		placeholder: 'Ваш E-Mail',
-		name: 'userEmail',
+		name: 'email',
 		type: 'text'
 	}, {
-		fieldName: 'Мобильный телефон',
 		placeholder: 'Контактный телефон',
-		name: 'userPhone',
+		name: 'phone',
 		type: 'text'
 	}, {
-		fieldName: 'Сообщение',
 		placeholder: 'Ваше сообщение',
-		name: 'userMessage',
+		name: 'message',
 		type: 'textarea'
-} ]
-
-const contactFormRules = {
-	userName: ['required'],
-	userEmail: ['required', 'email'],
-	userPhone: ['required', 'mobile'],
-	userMessage: ['required']
-}
+} ];
 
 const Contact = () => {
-	const renderContactForm = () => <ContactForm 
-		isFluid={true} 
-		rules={contactFormRules}
-		fields={contactFormFields} 
-	/>
-
 	const contactModalConfiguration = {
 		title: 'Обратная связь',
 		description: 'Сообщение',
@@ -69,7 +52,7 @@ const Contact = () => {
 				<div className="list">
 					<div className="item">
 						<div className="icon">
-							<img src={config.staticURL + "/img/paper-plane.png"} alt="Почта"/>
+							<img src={config.static + "/img/paper-plane.png"} alt="Почта"/>
 						</div>
 						<div className="content">
 							hh@levelupworlds.com
@@ -77,7 +60,7 @@ const Contact = () => {
 					</div>
 					<div className="item">
 						<div className="icon">
-							<img src={config.staticURL + "/img/placeholder.png"} alt="Адрес"/>
+							<img src={config.static + "/img/placeholder.png"} alt="Адрес"/>
 						</div>
 						<div className="content">
 							г. Москва, Пресненская наб., 6, стр. 2
@@ -85,7 +68,7 @@ const Contact = () => {
 					</div>
 					<div className="item">
 						<div className="icon">
-							<img src={config.staticURL + "/img/smartphone.png"} alt="Мобильный телефон"/>
+							<img src={config.static + "/img/smartphone.png"} alt="Мобильный телефон"/>
 						</div>
 						<div className="content">
 							(903) 634-69-29
@@ -99,7 +82,15 @@ const Contact = () => {
 				</p>
 			</div>
 			<div className="block">
-				<Modal options={contactModalConfiguration} render={renderContactForm()}>
+				<Modal 
+					options={contactModalConfiguration} 
+					render={(
+						<ContactForm 
+							isFluid={true} 
+							fields={contactFormFields} 
+						/>
+					)}
+				>
 					<button className="button">Написать нам</button>
 				</Modal>
 			</div>

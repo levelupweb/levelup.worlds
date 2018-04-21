@@ -1,8 +1,8 @@
 import React from 'react'; 
-import ContactForm from '../../components/contactForm/ContactForm.js';
-import Modal from '../../components/modal/Modal.js';
-import InformationTable from '../../components/informationTable/InformationTable.js';
-import Socials from '../../components/socials/Socials.js'
+import ContactForm from '../../components/contactForm';
+import Modal from '../../components/modal';
+import InformationTable from '../../components/informationTable';
+import Socials from '../../components/socials'
 import { Helmet } from 'react-helmet'
 
 const contactFormFields = [

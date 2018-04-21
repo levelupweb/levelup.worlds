@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { Helmet } from "react-helmet";
-import "./notFound.css"
-import config from '../../../../config.js'
+import "./styles.css"
+import config from '../../utils/config'
 
 const notFound = props => 
 	<section className="fullpage center first notFound">
@@ -19,7 +19,7 @@ const notFound = props =>
   		<meta property="og:description" content="This is an exprensive boilerplate for creating rich sites" />
   	</Helmet>
 		<Link to="/">
-			<img src={config.staticURL + '/img/logo-default.png'} width="64px" alt="404 ошибка" />
+			<img src={config.static + '/img/logo-default.png'} width="64px" alt="404 ошибка" />
 		</Link>
 		<p className="primary">Ошибка 404</p>
 	</section>

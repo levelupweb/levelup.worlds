@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Socials from '../socials/Socials.js'
-import './footer.css'
+import Socials from '../socials'
+import './styles.css'
 
 export default class Footer extends Component {
 	render() {

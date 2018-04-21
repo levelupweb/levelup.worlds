@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import PropTypes from "prop-types";
-import Footer from "../components/footer/Footer.js"
-import Header from '../components/header/Header.js';
+import Footer from "../components/footer"
+import Header from "../components/header";
 import { NotificationContainer } from 'react-notifications';
 import './routePageContainer.css';
 

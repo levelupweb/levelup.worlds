@@ -1,18 +1,16 @@
 import React from "react";
 import SwitchCSSTransitionGroup from "switch-css-transition-group";
 import { withRouter } from "react-router";
-
-// components
-import Index from "../../pages/index/Index.js";
-import About from "../../pages/about/About.js";
-import Career from "../../pages/career/Career.js";
-import Contact from "../../pages/contact/Contact.js";
-import Partner from "../../pages/partner/Partner.js";
-import Team from "../../pages/team/Team.js";
-import notFound from "../../pages/notFound/notFound.js";
-import RouteDefaultContainer from "../../containers/RouteDefaultContainer.js";
-import RoutePageContainer from "../../containers/RoutePageContainer.js";
-
+import Index from "../../pages/index";
+import About from "../../pages/about"; 
+import Career from "../../pages/career";
+import Contact from "../../pages/contact"; 
+import Partner from "../../pages/partner";
+import Team from "../../pages/team"; 
+import notFound from "../../pages/notFound";
+import RouteDefaultContainer from "../../containers/RouteDefaultContainer";
+import RoutePageContainer from "../../containers/RoutePageContainer";
+ 
 const App = props => {
 	const { location } = props;
 	return (
@@ -31,7 +29,7 @@ const App = props => {
 				<RoutePageContainer path="/career" component={Career} />
 				<RouteDefaultContainer component={notFound} />
 			</SwitchCSSTransitionGroup>
-		</div>
+		</div> 
 	);
 };
 

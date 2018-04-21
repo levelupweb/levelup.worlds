@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Position from './Position.js'
-import positions from './positions.js'
+import Position from './position'
+import positions from './positions'
 import { Helmet } from 'react-helmet'
-import './career.css'
+import './styles.css'
 
 class Career extends Component {
 	renderPositions(positions) {

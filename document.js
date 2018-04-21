@@ -1,7 +1,7 @@
-import config from './config.js';
-const dist = config.staticURL;
+const config = require('./config');
+const dist = config.client.static;
 
-const generateHTML = (html, helmet) => 
+const document = (html, helmet) => 
 `<!DOCTYPE html>
   <html lang="ru">
   <head>
@@ -50,9 +50,10 @@ const generateHTML = (html, helmet) =>
       ${html}
     </noscript>
     <div id="root"></div>
+    <script>window.global = ${JSON.stringify(config.client)};</script>
     <script src="${dist}/bundle.js"></script>
-   
+    
   </body>
 </html>
 `
-export default generateHTML;
+module.exports = document;

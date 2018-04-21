@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import InformationTable from '../../components/informationTable/InformationTable.js'
-import ContactForm from '../../components/contactForm/ContactForm.js';
-import Modal from '../../components/modal/Modal.js';
-import config from '../../../../config.js'
+import InformationTable from '../../components/informationTable'
+import ContactForm from '../../components/contactForm';
+import Modal from '../../components/modal';
+import config from '../../utils/config'
 import { Helmet } from 'react-helmet'
-import './partner.css'
+import './styles.css'
 
 const contactFormFields = [ {
 		fieldName: 'Имя клиента',
@@ -49,19 +49,19 @@ class Partner extends Component {
 		}
 		const informationTableItems = [
 			{
-				image: config.staticURL + '/img/marketing.png',
+				image: config.static + '/img/marketing.png',
 				imageAlt: 'Приглашай клиентов',
 				title: 'Шаг 1',
 				description: 'Вы привлекаете клиентов любым способом'
 			}, 
 			{
-				image: config.staticURL + '/img/buy.png',
+				image: config.static + '/img/buy.png',
 				title: 'Шаг 2',
 				imageAlt: 'Клиент совершает покупку с вашим посредничеством',
 				description: 'Клиент совершает покупку с вашим посредничеством'
 			}, 
 			{
-				image: config.staticURL + '/img/coins.png',
+				image: config.static + '/img/coins.png',
 				title: 'Шаг 3',
 				imageAlt: 'Вы получаете деньги за сделку',
 				description: 'Вы получаете деньги за сделку'

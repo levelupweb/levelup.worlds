@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import config from '../../../../config.js'
-import "./header.css";
+import config from "../../utils/config";
+import "./styles.css";
 
 const Header = props => 
 	<div className="header block">
 		<nav className="navigation">
 			<ul>
 				{/*<Link
-
 					to="/page/about">
 					<li>О нас</li>
 				</Link> */}
@@ -31,7 +30,7 @@ const Header = props =>
 			</ul>
 			<ul className="header-logo">
 				<Link to="/">
-					<img src={config.staticURL + '/img/logo-default.png'} alt="Levelup Web"/>
+					<img src={config.static + '/img/logo-default.png'} alt="Levelup Web"/>
 				</Link>
 			</ul>	
 		</nav>

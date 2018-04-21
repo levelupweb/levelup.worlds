@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import propTypes from "prop-types";
-import Burger from '../components/burger/Burger.js';
-import Footer from '../components/footer/Footer.js'
+import Burger from '../components/burger';
+import Footer from '../components/footer'
 import { NotificationContainer } from 'react-notifications';
 import './routeDefaultContainer.css';
 

@@ -1,24 +1,43 @@
-const config = new function() {
-const config = this;
+const dev = process.env.DEV === "true";
+const ssl = process.env.SSL === "true";
+const port = process.env.PORT;
+const type = ssl ? "https://" : "http://";
+const domain = type + (dev ? ("localhost:" + port) : process.env.URL);
+const staticfolder = "/dist";
+const staticaddr = domain + staticfolder;
+const host = dev ? "127.0.0.1" : process.env.IP;
+const hosturl = type + host;
+const sitename = process.env.URL;
+const sender = process.env.SENDER;
+const receiever = process.env.RECEIEVER;
+const smtpuser = process.env.SMTP_LOGIN;
+const smtppassword = process.env.SMTP_PASSWORD;
+const emailurl = `${domain}/send`;
+const smtphost = process.env.SMTP_HOST;
 
-this.dev = true;
-this.ssl = false;
-this.port = "3060";
-this.staticFolder = "/dist"
-this.type = this.ssl ? "https://" : "http://";
-this.domain = this.type + (this.dev ? ("localhost:" + this.port) : "levelupworlds.com");
-this.staticURL = this.domain + this.staticFolder;
-this.host = this.dev ? "127.0.0.1" : "185.22.232.114";
-this.hosturl = this.type + this.host;
-this.sitename = "levelupworlds.com";
-this.token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsZXZlbHVwd29ybGRzLmNvbSIsImlhdCI6MTUwMzg0MDY5NCwiZXhwIjoxNTM1Mzc2NjkzLCJhdWQiOiJsZXZlbHVwd29ybGRzLmNvbSIsInN1YiI6IjUzOTkzNDg1IiwiYXBwbGljYXRpb25faWQiOiI1Mzk5MzQ4NSJ9.cgJLvuJYqbuVwz2mtwZ65kOENe1L1DCNkQe4qzVIx-o";
-this.mail = new function() {
-this.port = "3080";
-this.sendURL = config.hosturl + ':' + this.port + '/send';
-this.who = "  Levelup Worlds";
-this.to = "beatzhitta@gmail.com";
+module.exports.server = {
+  dev,
+  ssl,
+  port,
+  domain,
+  static: staticfolder,
+  hosturl,
+  smtpuser,
+  smtppassword,
+  smtphost,
+  mail: {
+    sender,
+    receiever,
+  }
 }
+
+module.exports.client = {
+  dev,
+  ssl,
+  port,
+  emailurl,
+  domain,
+  static: staticaddr,
+  hosturl,
 };
 
-
-export default config;

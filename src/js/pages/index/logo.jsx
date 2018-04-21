@@ -1,9 +1,9 @@
 import React from 'react';
-import config from '../../../../config.js'
+import config from '../../utils/config'
 
 const Logo = ({ size }) =>
 	<img 
-		src={config.staticURL + '/img/logo-default.png'} 
+		src={config.static + '/img/logo-default.png'} 
 		width={size + 'px'} 
 		alt="Levelup Worlds" 
 	/>

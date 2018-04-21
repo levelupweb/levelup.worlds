@@ -1,13 +1,13 @@
 import React from 'react'
-import config from '../../../../config.js'
-import Socials from "../../components/socials/Socials.js";
+import config from '../../utils/config'
+import Socials from "../../components/socials";
 import { Link } from 'react-router-dom'
 
 const Jumbotron = props =>
 	<div className="Jumbotron">
 		<Socials classNames="center"/>
 		<div className="logotype">
-			<img src={config.staticURL + '/img/logo-default.png'} width="55px" alt="Levelup Worlds" />
+			<img src={config.static + '/img/logo-default.png'} width="55px" alt="Levelup Worlds" />
 			<h1>Levelup Worlds</h1>
 		</div>
 		<p className="primary">

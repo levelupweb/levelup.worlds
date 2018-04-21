@@ -1,5 +1,5 @@
 import React from 'react';
-import './socials.css'
+import './styles.css'
 
 const Socials = () => 
 	<div className="socials">

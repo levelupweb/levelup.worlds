@@ -4,8 +4,12 @@
   "private": true,
   "dependencies": {
     "axios": "^0.16.2",
+    "body-parser": "^1.18.2",
     "dateformat": "^2.0.0",
+    "dotenv": "^5.0.1",
+    "emailjs": "^2.0.0",
     "express": "^4.15.4",
+    "express-validator": "^5.1.2",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-css-transition-replace": "^3.0.0",
@@ -16,8 +20,7 @@
     "react-router-dom": "^4.1.2",
     "react-scripts": "1.0.11",
     "scrollreveal": "^3.3.6",
-    "switch-css-transition-group": "^0.1.2",
-    "typed.js": "^2.0.5"
+    "switch-css-transition-group": "^0.1.2"
   },
   "scripts": {
     "production": "sudo forever run.js &",
@@ -34,6 +37,8 @@
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
     "file-loader": "^0.11.2",
     "ignore-styles": "^5.0.1",
     "style-loader": "^0.18.2"

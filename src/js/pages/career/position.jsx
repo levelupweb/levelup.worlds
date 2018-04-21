@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import dateFormat from 'dateformat';
-import ContactForm from '../../components/contactForm/ContactForm.js';
-import Modal from '../../components/modal/Modal.js';
+import ContactForm from '../../components/contactForm/index';
+import Modal from '../../components/modal';
 import './position.css'
 
 const contactModalConfiguration = {

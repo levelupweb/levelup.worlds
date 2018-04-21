@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NoMatch.css';
+import './styles.css';
 
 export default class NoMatch extends React.Component {
   render() {

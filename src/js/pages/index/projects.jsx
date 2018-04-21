@@ -1,5 +1,5 @@
 import React from 'react';
-import config from '../../../../config.js'
+import config from '../../utils/config'
 import { Link } from 'react-router-dom'
 
 const Projects = props =>
@@ -9,7 +9,7 @@ const Projects = props =>
 				<div className="image">
 					<a href="http://levelup.name/" target="_blank">
 						<img
-							src={config.staticURL + '/img/logo-name.png'}
+							src={config.static + '/img/logo-name.png'}
 							width="64px"
 							alt="Levelup Name"
 						/>
@@ -28,7 +28,7 @@ const Projects = props =>
 				<div className="image">
 					<a href="http://web.levelupworlds.com/" target="_blank">
 						<img
-							src={config.staticURL + '/img/logo-web.png'}
+							src={config.static + '/img/logo-web.png'}
 							width="64px"
 							alt="Levelup Web"
 						/>
@@ -47,7 +47,7 @@ const Projects = props =>
 				<div className="image">
 					<a href="http://levelupmag.com/" target="_blank">
 						<img
-							src={config.staticURL + '/img/logo-magazine.png'}
+							src={config.static + '/img/logo-magazine.png'}
 							width="64px"
 							alt="Levelup Magazine"
 						/>
@@ -66,7 +66,7 @@ const Projects = props =>
 				<div className="image">
 					<a href="http://music.levelupworlds.com/" target="_blank">
 						<img
-							src={config.staticURL + '/img/logo-music.png'}
+							src={config.static + '/img/logo-music.png'}
 							width="64px"
 							alt="Levelup Music"
 						/>
@@ -85,7 +85,7 @@ const Projects = props =>
 				<div className="image">
 					<a href="http://smm.levelupworlds.com/" target="_blank">
 						<img
-							src={config.staticURL + '/img/logo-promo.png'}
+							src={config.static + '/img/logo-promo.png'}
 							width="64px"
 							alt="Levelup Promo"
 						/>
@@ -104,7 +104,7 @@ const Projects = props =>
 				<div className="image">
 					<a href="http://film.levelupworlds.com/" target="_blank">
 						<img
-							src={config.staticURL + '/img/logo-film.png'}
+							src={config.static + '/img/logo-film.png'}
 							width="64px"
 							alt="Levelup Promo"
 						/>

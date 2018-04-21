@@ -1,5 +1,5 @@
 import React from 'react';
-import './informationTable.css';
+import './styles.css';
 
 const InformationTableItem = (props) => {
 	const { head, title, description, image, imageAlt, imageSize, link } = props;

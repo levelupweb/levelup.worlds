@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Item from './Item.js'
-import { Link } from 'react-router-dom'
-import users from './userlist.js'
-import { Helmet } from 'react-helmet'
-import './team.css'
+import Item from './item';
+import { Link } from 'react-router-dom';
+import users from './userlist';
+import { Helmet } from 'react-helmet';
+import './styles.css';
 
 export default class Team extends Component {
 	renderUsers(users) {

@@ -1,3 +1,7 @@
+.blocked {
+  overflow: hidden;
+  position: fixed;
+}
 .Modal {
 	position:fixed;
 	left:0;
@@ -14,16 +18,20 @@
 	justify-content:center;
 	overflow-y:scroll;
 }
+.Modal-content {
+	width:100%;
+}
 .Modal-wrapper {
+	width:550px;
 	max-width:550px;
 	transition:0.4s all ease;
-	padding:0 15px;
-	height: 100%;
+	padding:80px 15px;
   display:flex;
 	align-items:flex-start;
 	justify-content:flex-start;
 	flex-direction:column;
-	padding-top:100px;
+	margin:auto;
+	vertical-align: middle;
 }
 .Modal.open {
 	top:0;

@@ -14,15 +14,19 @@ form.fluid {
 	margin-bottom:5px;
 	position:absolute;
 	left:0px;
+	pointer-events:none;
 	top:9px;
-	z-index:1;
 	transition:0.2s all ease;
+	text-align:left;
+}
+.field input {
+	height:45px;
 }
 .field input,
 .field textarea {
 	border:0px;
 	border-bottom:1px solid #c0c0c0;
-	padding:10px 0px;
+	padding:0;
 	font-size:15px;
 	background:transparent;
 	z-index:999;
@@ -43,4 +47,17 @@ form.fluid {
 	display:none;
 	opacity:0;
 	visibility: hidden;
+}
+
+.field-input-element:-webkit-autofill,
+.field-input-element:-webkit-autofill:hover, 
+.field-input-element:-webkit-autofill:focus
+.field-input-element:-webkit-autofill, 
+.field-textarea-element:-webkit-autofill,
+.field-textarea-element:-webkit-autofill:hover
+.field-textarea-element:-webkit-autofill:focus, {
+  border: 1px solid green;
+  -webkit-text-fill-color: green;
+	-webkit-box-shadow: 0 0 0px 1000px #000 inset;
+	transition: .2s all ease;
 }

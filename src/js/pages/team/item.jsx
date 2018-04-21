@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "../../components/socials/socials.css";
-import "./team.css"
+import "../../components/socials/styles.css";
+import "./styles.css"
 
 export default class Item extends Component {
 	renderSocials(socials) {

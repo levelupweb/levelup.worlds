@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
 import ReactCSSTransitionReplace from 'react-css-transition-replace';
-import "./index.css";
-import Projects from './Projects.js';
-import Jumbotron from './Jumbotron.js';
-import Logo from './Logo.js';
-import config from '../../../../config.js';
+import "./styles.css";
+import Projects from './projects';
+import Jumbotron from './jumbotron';
+import Logo from './logo';
 
 
 class Index extends Component {

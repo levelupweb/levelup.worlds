@@ -1,5 +1,5 @@
 import React from 'react';
-import InformationTableItem from './InformationTableItem.js'
+import InformationTableItem from './item'
 
 const InformationTable = (props) => {
 	return (
