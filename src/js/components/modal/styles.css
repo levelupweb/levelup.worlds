@@ -1,8 +1,11 @@
 .blocked {
   overflow: hidden;
-  position: fixed;
+	position: fixed;
+	margin: auto;
+  width: 100%;
 }
-.Modal {
+
+.modal {
 	position:fixed;
 	left:0;
 	top:-100%;
@@ -18,12 +21,14 @@
 	justify-content:center;
 	overflow-y:scroll;
 }
-.Modal-content {
+
+.modal-content {
 	width:100%;
 }
-.Modal-wrapper {
-	width:550px;
-	max-width:550px;
+
+.modal-wrapper {
+	width:650px;
+	max-width:650px;
 	transition:0.4s all ease;
 	padding:80px 15px;
   display:flex;
@@ -33,17 +38,20 @@
 	margin:auto;
 	vertical-align: middle;
 }
-.Modal.open {
+
+.modal.open {
 	top:0;
 	opacity:1.0;
 	visibility: visible;
 	z-index:999;
 }
-.Modal-title small {
+
+.modal-title small {
 	font-weight:100;
 	opacity:0.5;
 }
-.Modal-closer {
+
+.modal-closer {
 	position:absolute;
 	right:20px;
 	top:20px;

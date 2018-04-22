@@ -1,10 +1,9 @@
-const fs = require("fs");
-const path = require('path');
+const fs = require('fs');
 const express = require('express');
-const emailjs = require("emailjs");
-const bodyParser = require("body-parser");
+const bodyParser = require('body-parser');
 const config = require('./config').server;
-const { checkContactData, emailHandler } = require("./email");
+const { checkContactData, emailContactHandler } = require('./emailContact');
+const { checkCareerData, emailCareerHandler } = require('./emailCareer');
 
 // server rendering
 const React = require('react');
@@ -14,10 +13,10 @@ const StaticRouter = require('react-router-dom/StaticRouter').default; // es6 ha
 const App = require('./src/js/components/app').default; // es6 hack
 const document = require('./document');
 
-const https = require ('https');
-const http = require ("http");
+const https = require('https');
+const http = require('http');
 
-const key  = fs.readFileSync('ssl/key.key', 'utf8');
+const key = fs.readFileSync('ssl/key.key', 'utf8');
 const cert = fs.readFileSync('ssl/cert.crt', 'utf8');
 
 const app = express();
@@ -27,28 +26,30 @@ app.use(config.static, express.static(__dirname + config.static));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.get("*", (req, res) => {
-	const html = renderToString(React.createElement(StaticRouter, {
+app.get('*', (req, res) => {
+  const html = renderToString(React.createElement(StaticRouter, {
     location: req.url,
     context: {},
-    children: React.createElement(App, {})
-  }))
+    children: React.createElement(App, {}),
+  }));
 
-	res.send(document(html, Helmet.renderStatic()));
+  res.send(document(html, Helmet.renderStatic()));
 });
 
-app.post("/send", [...checkContactData], emailHandler);
+app.post(config.contactposturl, [...checkContactData], emailContactHandler);
+
+app.post(config.careerposturl, [...checkCareerData], emailCareerHandler);
 
 let server;
 
-if (process.env.SSL === "true") {
+if (process.env.SSL === 'true') {
   server = https.createServer({ key, cert }, app);
 } else {
   server = http.createServer(app);
 }
 
-server.listen(config.port, err => {
-  if(err) return console.log(err)
- 	console.log('-> Levelup Web on: ' + config.port);
- 	console.log('-> Address: ' + config.hosturl);
+server.listen(config.port, (err) => {
+  if (err) return console.log(err);
+ 	console.log(`-> Levelup Web on: ${config.port}`);
+ 	console.log(`-> Address: ${config.hosturl}`);
 });

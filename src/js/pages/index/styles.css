@@ -20,38 +20,6 @@
 		display:none;
 	}
 }
-.projects {
-	display:flex;
-	flex-direction:row;
-	flex-wrap:wrap;
-	justify-content:space-between;
-}
-@media screen and (max-width:576px) {
-	.projects .project p {
-		display:none;
-	}
-}
-.projects a {
-	color:#000;
-}
-.projects a:after {
-	display:none;
-}
-.projects .project {
-	width:33%;
-	margin-bottom:17px;
-	transition: 0.2s all ease;
-}
-.projects .project:hover {
-	transform:scale(0.9);
-}
-.projects .project .title {
-	padding:0 15px;
-}
-.projects .project .title span {
-	margin:10px 0;
-	display:block;
-}
 .Jumbotron {
 	position:relative;
 	transition:0.2s all ease;
@@ -64,32 +32,8 @@
 	justify-content:center;
 	align-items:center;
 }
-.Proj {
-	width:100%;
-	max-width:100%;
-}
 @media screen and (max-height:654px) {
 	.Default .Footer {
 		display:none;
 	}
-}
-.fade-wait-leave {
-  opacity: 1;
-}
-.fade-wait-leave.fade-wait-leave-active {
-  opacity: 0;
-  transition: opacity .4s ease-in;
-}
-
-.fade-wait-enter {
-  opacity: 0;
-}
-.fade-wait-enter.fade-wait-enter-active {
-  opacity: 1;
-  /* Delay the enter animation until the leave completes */
-  transition: opacity .4s ease-in .6s;
-}
-
-.fade-wait-height {
-  transition: height .6s ease-in-out;
 }

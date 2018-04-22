@@ -1,39 +1,46 @@
 .footer {
   width:100%;
-  position:fixed;
+  position:absolute;
   bottom:0px;
   left:0px;
   display:flex;
   align-items:center;
   justify-content:center;
 }
+
 .footer .footer-wrapper {
   padding:40px;
   display:flex;
   align-items:center;
   justify-content:center;
 }
+
 @media screen and (max-width: 498px) {
   .footer .footer-wrapper {
     padding: 15px;
   }
 }
+
 .footer.onPage {
   color:#444;
-  font-size:15px;
-  font-weight:100;
   width:100%;
-  position: static;
+  position: absolute;
+  left:0;
+  bottom:0;
 }
+
 .footer.onPage .footer-wrapper {
   justify-content: space-between;
   align-items: center;
-  position: static;
   border-top:1px solid #e1e1e1;
-  padding:13px 8px;
-  padding-bottom:0;
+  padding: 20px 14px;
   width:100%;
 }
+
+.footer a {
+  font-weight:bold;
+}
+
 @media screen and (max-width:992px) {
   .footer {
     display:none;

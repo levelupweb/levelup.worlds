@@ -1,0 +1,23 @@
+.projects {
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+}
+
+.projects .project {
+  width:31%;
+  text-align: center;
+  margin-bottom:20px;
+  margin-top:20px;
+  margin-right:1%;
+  margin-left:1%;
+}
+
+.projects .project .title {
+  margin-top:15px;
+}
+
+.projects .project .title p {
+  font-size:16px;
+  color:#666;
+}
